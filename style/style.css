@@ -10,22 +10,29 @@ li {
     display: inline-block;
     color: cadetblue;
     text-decoration: none;
+    font-weight: bold;
 }
-a{
-    text-decoration: blink;
-}
+
 .cool-link::after {
     content: '';
     display: block;
     width: 0;
-    height: 2px;
+    height: 4px;
     background: cadetblue;
     transition: width .4s;
 }
 
 .cool-link:hover::after {
-    width: 100%;
+    width: 50%;
     transition: width .3s;
+    
+}
+a{
+    color: black;
+}
+a:hover {
+    color: black;
+    text-decoration: none;
 }
 .menu{
     padding-top: 20px;
@@ -77,7 +84,9 @@ a{
     text-align: center;
 }
 .aw9aat{
+    background-image: url("/images/stopwatch.png");
     background-color: #4ea0a2;
+
     padding: 50px;
     border-radius: 30px;
     box-shadow: 0px 1px 4px -2px cadetblue;
@@ -88,6 +97,9 @@ a{
 @media (max-width:750px){
     .s-media{
 display: none;
+    }
+    #gone{
+        display: none;
     }
     #saw{
         display: none;
