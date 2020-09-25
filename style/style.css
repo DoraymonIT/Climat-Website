@@ -45,7 +45,7 @@ a:hover {
 .s-m{
     background-color: cadetblue;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 25%;
     color: rgb(255, 255, 255);
 }
 #image{
@@ -64,11 +64,11 @@ a:hover {
     font-variant: petite-caps;
 }
 .btn-custom{
-    width: 300px;
+    width: 200px;
     height: 70px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
-    border-radius: 25px;
+    border-radius: 2px;
 }
 .center{
     padding-left: 100px;
@@ -90,6 +90,39 @@ a:hover {
     padding: 50px;
     border-radius: 30px;
     box-shadow: 0px 1px 4px -2px cadetblue;
+}
+.person{
+    box-shadow: 0px 1px 10px 1px #dedede;
+    border-radius:10px;
+    background-color: #5b9294;
+}
+.pic{
+    background-image: url("/images/20536.jpg");
+}
+.fa{
+    font-size: 20px;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+.btn-light{
+    background-color: cadetblue!important;
+    color: white!important;
+}
+.itar{
+    box-shadow: 0px 1px 10px 1px #dedede;
+    border-radius:10px;
+    padding:20px
+}
+#value {
+    font-size: 50px;
+}
+.swiper-container {
+    width: 600px;
+    height: 300px;
 }
 /* .equipe{
     
