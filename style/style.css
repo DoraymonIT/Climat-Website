@@ -110,16 +110,17 @@ ul {
   list-style: none;
 }
 .aw9aat {
-  background-image: url("/images/stopwatch.png");
-  background-color: #4ea0a2;
-
-  padding: 50px;
-
-  box-shadow: 5px 5px 0px 1px #254b4c;
-  background-size: 150px;
-  background-position-x: right;
-  background-position-y: bottom;
-  background-repeat: no-repeat;
+     background-image: url(/images/stopwatch.png);
+    background-color: #4ea0a2;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    box-shadow: 8px 8px 0px 1px #254b4c;
+    background-size: 150px;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
 }
 .person {
   box-shadow: 6px 6px 7px 0px #dedede;
