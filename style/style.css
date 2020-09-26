@@ -100,6 +100,7 @@ color:yellow
     padding-right: 100px;
 }
 .footer-bar{
+    background-image: url("/images/Polygon-0.2s-1280px.svg");
     background-color: #0d3c3e;
     color: white;
     padding-left: 100px;
@@ -108,6 +109,7 @@ color:yellow
     padding-bottom: 10px;
     text-align: center;
 }
+ul { list-style: none}
 .aw9aat{
     background-image: url("/images/stopwatch.png");
     background-color: #4ea0a2;
@@ -153,6 +155,25 @@ h2{
     text-align: center;
     padding: 4px;
 }
+/* OnLoad ing */
+
+  
+  .page    { display: none;  }
+  
+  #loading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    background-image: url("/images/Double Ring-1s-200px.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 @media (max-width:750px){
     .s-media{
 display: none;
