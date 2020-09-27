@@ -179,7 +179,39 @@ h2 {
   transition: transform 2.8s;
   transform-style: preserve-3d;
 }
-
+img{
+  opacity: 0.9;
+}
+.boldd{
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+.nous{
+  background-image: url("/images/Polygon-0.2s-1280px.svg");
+  background-color: #0d3c3e;
+  color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.frige {
+  background-image: url(/images/cold.png);
+ background-size: 100px;
+ background-position-x: left;
+ background-position-y: top;
+ background-repeat: no-repeat;
+ 
+}
+.climat {
+  background-image: url(/images/air-conditioner.png);
+ background-size: 100px;
+ background-position-x: left;
+ background-position-y: top;
+ background-repeat: no-repeat;
+}
 @media (max-width: 750px) {
   .s-media {
     display: none;
