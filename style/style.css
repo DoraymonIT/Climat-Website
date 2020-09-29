@@ -97,6 +97,7 @@ a:hover {
   padding-right: 100px;
 }
 .footer-bar {
+
   background-image: url("/images/Polygon-0.2s-1280px.svg");
   background-color: #0d3c3e;
   color: white;
@@ -122,6 +123,15 @@ ul {
     background-position-y: bottom;
     background-repeat: no-repeat;
 }
+.aw9aat1 {
+  background-image: url(/images/air-conditioner\ 2.png);
+
+ background-size: 250px;
+ background-position-x: right;
+ background-position-y: bottom;
+ background-repeat: no-repeat;
+}
+
 .person {
   box-shadow: 6px 6px 7px 0px #dedede;
   border-radius: 5px;
@@ -136,7 +146,10 @@ ul {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  display: none;
+  background-color: cadetblue;
+  padding: 15px;
+  border-radius: 100%;
+  color: white;
 }
 .btn-light {
   background-color: cadetblue !important;
@@ -168,7 +181,7 @@ h2 {
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  /* background-color: white; */
   background-image: url("/images/Double Ring-1s-200px.svg");
   background-repeat: no-repeat;
   background-position: center;
