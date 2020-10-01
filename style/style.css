@@ -204,8 +204,8 @@ img{
   background-image: url("/images/Polygon-0.2s-1280px.svg");
   background-color: #0d3c3e;
   color: white;
-  padding-left: 100px;
-  padding-right: 100px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
   padding-top: 50px;
   padding-bottom: 10px;
   text-align: center;
