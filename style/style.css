@@ -101,8 +101,8 @@ a:hover {
   background-image: url("/images/Polygon-0.2s-1280px.svg");
   background-color: #0d3c3e;
   color: white;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 50px;
   padding-bottom: 10px;
   text-align: center;
@@ -125,7 +125,7 @@ ul {
 }
 .aw9aat1 {
   background-image: url(/images/air-conditioner\ 2.png);
-
+opacity:0.9;
  background-size: 250px;
  background-position-x: right;
  background-position-y: bottom;
@@ -246,8 +246,8 @@ img{
     font-size: large;
   }
   .btn-custom {
-    width: 120px;
-    height: 30px;
+    width: 130px;
+    height: 40px;
     font-size: 10px;
     font-weight: bolder;
     border-radius: 5px;
