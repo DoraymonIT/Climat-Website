@@ -50,25 +50,43 @@ a:hover {
     /* border-radius: 25%; */
   color: black;
 }
-.s-m:hover {
-  box-shadow: 0px 0px 10px 0px #d2d2d2;
-  padding: 10px;
-  border-radius: 50%;
-}
+
 .s-mF {
   /* background-color: cadetblue;
     padding: 10px; */
   /* border-radius: 25%; */
   color: white;
 }
-.fa-facebook:hover {
-  color: blue;
+.fa-facebook{
+  background-color: #3b5998;
+  padding: 8px;
+  color: white;
+  border-radius: 50%;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
-.fa-youtube:hover {
-  color: red;
+.fa-youtube{
+  background-color: #c4302b;
+  padding: 8px;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
-.fa-snapchat:hover {
-  color: yellow;
+.fa-twitter{
+background-color: #00acee ;
+  padding: 8px;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.fa-instagram{
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  padding: 8px;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
 }
 #image {
   position: relative;

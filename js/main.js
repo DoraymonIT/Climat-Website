@@ -1,11 +1,11 @@
 AOS.init();
 
 var options = {
-  strings: ["FROID .", "CHAUD ."],
+  strings: ["FROID.", "CHAUD."],
   typeSpeed: 120,
   loop: true,
   loopCount: Infinity,
-  cursorChar: "..",
+  cursorChar: "|",
 };
 
 var typed = new Typed("#fc", options);
