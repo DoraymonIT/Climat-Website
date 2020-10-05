@@ -1,7 +1,7 @@
 
 
 var options = {
-  strings: ["FROID.", "CHAUD."],
+  strings: ["FROID.", "FROID."],
   typeSpeed: 120,
   loop: true,
   loopCount: Infinity,

@@ -278,6 +278,35 @@ text-decoration: underline;
   background-repeat: no-repeat;
   background-size: contain;
 }
+.d-block{
+  height:400px;
+  widows: 100%;
+}
+.modal-dialog,
+.modal-content {
+    /* 80% of window height */
+    height: 80%;
+}
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+.btn-detailles{
+  background-color: cadetblue;
+ 
+}
+.btn-detailles:hover{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+}
+.detailles{
+  padding-top: 40px;
+}
+.titreee{
+  background-color: cadetblue;
+  padding : 10px;
+}
 @media (max-width: 750px) {
   .s-media {
     display: none;
@@ -285,13 +314,13 @@ text-decoration: underline;
   #gone {
     display: none;
   }
-  #saw {
+  /* #saw {
     display: none;
-  }
+  } */
   #definition {
     position: absolute;
     left: 10px;
-    top: 520px;
+    top: 650px;
     padding-top: 20px;
     width: 250px;
     font-weight: bold;
