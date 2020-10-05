@@ -1,4 +1,4 @@
-AOS.init();
+
 
 var options = {
   strings: ["FROID.", "CHAUD."],
@@ -42,3 +42,8 @@ onReady(function () {
   setVisible(".page", true);
   setVisible("#loading", false);
 });
+
+
+
+
+
