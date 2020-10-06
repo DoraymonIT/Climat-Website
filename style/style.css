@@ -140,7 +140,6 @@ a:hover {
   padding-right: 15px;
   padding-top: 50px;
   padding-bottom: 10px;
-
 }
 ul {
   list-style: none;
@@ -259,56 +258,58 @@ img {
   background-position-y: top;
   background-repeat: no-repeat;
 }
-.lien:hover{
-text-decoration: underline;
-
+.lien:hover {
+  text-decoration: underline;
 }
-.logo1{
+.logo1 {
   background-image: url("../images/logo1.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.logo2{
+.logo2 {
   background-image: url("../images/logo3.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.logo4{
+.logo4 {
   background-image: url("../images/logo4.jpg");
   background-repeat: no-repeat;
   background-size: contain;
 }
-.d-block{
-  height:400px;
+.d-block {
+  height: 400px;
   widows: 100%;
 }
 .modal-dialog,
 .modal-content {
-    /* 80% of window height */
-    height: 80%;
+  /* 80% of window height */
+  height: 80%;
 }
 
 .modal-body {
-    /* 100% = dialog height, 120px = header + footer */
-    max-height: calc(100% - 120px);
-    overflow-y: scroll;
+  /* 100% = dialog height, 120px = header + footer */
+  max-height: calc(100% - 120px);
+  overflow-y: scroll;
 }
-.btn-detailles{
+.btn-detailles {
   background-color: cadetblue;
- 
 }
-.btn-detailles:hover{
+.btn-detailles:hover {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
 }
-.detailles{
+.detailles {
   padding-top: 40px;
 }
-.titreee{
+.titreee {
   background-color: cadetblue;
-  padding : 10px;
+  padding: 10px;
 }
-.blane{
+.blane {
   font-size: 14px;
+}
+.client:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 @media (max-width: 750px) {
   .s-media {
