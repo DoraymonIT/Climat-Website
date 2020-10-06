@@ -114,7 +114,7 @@ a:hover {
   background-color: cadetblue;
   padding: 10px;
   color: white;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   text-align: center;
 }
 .dash:hover {
@@ -260,6 +260,14 @@ img {
 }
 .lien:hover {
   text-decoration: underline;
+}
+.lien1:hover {
+ 
+  background-color: cadetblue;
+  color: white;
+}
+.lien1{
+  padding:15px;
 }
 .logo1 {
   background-image: url("../images/logo1.svg");
