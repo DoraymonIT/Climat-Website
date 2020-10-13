@@ -15,7 +15,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link
       rel="shortcut icon"
       href="../images/air-conditioner 1.png"
@@ -39,7 +39,8 @@
           <a href="mailto:froid.inter@gmail.com">froid.inter@gmail.com</a>
         </div>
         <div class="col-md-3">
-          <i class="fa fa-phone"></i> +212600626950 & +212672309296
+          <i class="fa fa-phone"></i> <a href="tel:+212600626950">+212600626950</a>  &  
+          <a href="tel:+212672309296">+212672309296</a>
         </div>
         <div class="col-md-4">
           <i class="fa fa-location-arrow"></i> Quartier Beausejour 5 N 5, 
@@ -52,7 +53,7 @@
         <div class="col-md-3">
           <a href="index.html">
             <img
-            src="../images/Sans titre (4).png"
+            src="../images/logo 1.png"
               class="img"
               alt="logo"
               height="85px"
@@ -495,7 +496,7 @@ data-aos-anchor-placement="center-bottom"  >
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-  <script src="/js/scroll.js"></script>
+  <script src="../js/scroll.js"></script>
 </html>

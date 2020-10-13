@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!empty($_SESSION['username'])) {
+        header('location: admin.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +18,7 @@
       rel="stylesheet"
       href="../vondor/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link
       rel="shortcut icon"
       href="../images/air-conditioner 1.png"
@@ -44,18 +50,18 @@
                 </div>
             </div>
          
-          <form action="" method="post">
+          <form action="login-process.php" method="post" >
             <label for="">
               <i class="fa fa-envelope-o" aria-hidden="true"></i> Email</label
             >
-            <input type="email" class="form-control btn-block" placeholder="Email@gmail.com" required />
+            <input type="email" name="username" class="form-control btn-block" placeholder="Email@gmail.com" required />
             <br />
             <label for="">
-              <i class="fa fa-lock" aria-hidden="true"></i> Password</label
+              <i class="fa fa-lock"  aria-hidden="true"></i> Password</label
             >
-            <input type="password" class="form-control" placeholder="*********" required />
+            <input type="password" name="password" class="form-control" placeholder="*********" required />
            <hr>
-            <button class="btn btn-block btn-success" type="submit">
+            <button class="btn btn-block btn-success" type="submit" name="login-submit">
               Se connecter
             </button>
           </form>

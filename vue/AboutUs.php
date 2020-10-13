@@ -1,3 +1,6 @@
+<?php require_once'database_connect.php';
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +22,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link
       rel="shortcut icon"
       href="../images/air-conditioner 1.png"
@@ -135,37 +138,39 @@
               text-align: center;
             "
           >
-            <img src="/images/cold.png" width="50px" />
+            <img src="../images/cold.png" width="50px" />
             Notre professionnels Équipe
           </h3>
         
 
           <div class="row">
+          <?php
+            $selectEquipe = $base->query('SELECT * FROM peoples ');
+            foreach ($selectEquipe as $data) :
+            ?>
             <div
               class="col-md-4 person"
               style="padding: 20px; text-align: center"
             >
-              <img
-                src="/images/person1-crop.jpg"
-                class="img"
+              <img class="img"
                 alt="Person 2"
                 width="60%"
-                style="border-radius: 50%"
-              />
+                style="border-radius: 50%" class="img-fluid img"  src='<?php echo $data['image']; ?>'>
               <div>
                 <hr />
               </div>
-              <h3>Technicien Spécialisée</h3>
-              <p>Expérience de plus de +10ans</p>
+              <h3><?php echo $data['nom'] ?></h3>
+              <p> <b> <?php echo $data['job'] ?></b> , <?php echo $data['description'] ?></p>
             </div>
 
-            <div
+            <?php endforeach; ?>
+            <!-- <div
               class="col-md-4 person"
               style="padding: 20px; text-align: center"
             >
               <img
                 class="img"
-                src="/images/person3-crop.jpg"
+                src="../images/person3-crop.jpg"
                 alt="Person 1"
                 width="70%"
                 style="border-radius: 50%"
@@ -176,8 +181,8 @@
               <h3>Hicham Zamri</h3>
               <p>CEO de INTER FROID , Expérience de plus de +10ans</p>
               <p>Hichamzamri@gmail.com</p>
-            </div>
-            <div
+            </div> -->
+            <!-- <div
               class="col-md-4 person"
               style="padding: 20px; text-align: center"
             >
@@ -193,7 +198,7 @@
               </div>
               <h3>Technicien Specialisee</h3>
               <p>Experience de plus de +10ans</p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

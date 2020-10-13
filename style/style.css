@@ -14,6 +14,11 @@ li {
   text-decoration: none;
   font-weight: bold;
 }
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  /* width: 30% !important; */
+}
 
 .cool-link::after {
   content: "";
@@ -327,6 +332,7 @@ img {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
+
 @media (max-width: 750px) {
   .s-media {
     display: none;

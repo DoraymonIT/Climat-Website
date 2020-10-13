@@ -1,0 +1,5 @@
+.sha:hover{
+    background-color: white;
+    color: cadetblue;
+    transform: scale(1.01);
+}
