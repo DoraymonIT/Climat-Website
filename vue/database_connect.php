@@ -1,7 +1,8 @@
 <?php
   try {
-    $base = new PDO('mysql:host=db4free.net; dbname=climat;port=3306', 'climat', 'Q$B8ZbGs_mPRe.8');
-  //  echo ("Bien Connecte");
+    $base = new PDO('mysql:host=localhost; dbname=id15118846_climatt;port=3306', 'id15118846_climatiseur', 'oYM5!C{p$^Vp7FY<');
+
+  //  echo ("Bien Connecte"); oYM5!C{p$^Vp7FY<
 
 }
   catch(exception $e) {

@@ -138,7 +138,7 @@ a:hover {
   padding-right: 100px;
 }
 .footer-bar {
-  background-image: url("/images/Polygon-0.2s-1280px.svg");
+  background-image: url("../images/Polygon-0.2s-1280px.svg");
   background-color: #0d3c3e;
   color: white;
   padding-left: 15px;
@@ -150,7 +150,7 @@ ul {
   list-style: none;
 }
 .aw9aat {
-  background-image: url(/images/stopwatch.png);
+  background-image: url("../images/stopwatch.png");
   background-color: #4ea0a2;
   padding-left: 30px;
   padding-top: 20px;
@@ -163,7 +163,7 @@ ul {
   background-repeat: no-repeat;
 }
 .aw9aat1 {
-  background-image: url(/images/air-conditioner\ 2.png);
+  background-image: url(../images/air-conditioner\ 2.png);
   opacity: 0.9;
   background-size: 250px;
   background-position-x: right;
@@ -176,7 +176,7 @@ ul {
   border-radius: 5px;
 }
 .pic {
-  background-image: url("/images/20536.jpg");
+  background-image: url("../images/20536.jpg");
 }
 .fa {
   font-size: 20px;
@@ -221,7 +221,7 @@ h2 {
   width: 100vw;
   height: 100vh;
   /* background-color: white; */
-  background-image: url("/images/Double Ring-1s-200px.svg");
+  background-image: url("../images/Double Ring-1s-200px.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -240,7 +240,7 @@ img {
   padding: 10px;
 }
 .nous {
-  background-image: url("/images/Polygon-0.2s-1280px.svg");
+  background-image: url("../images/Polygon-0.2s-1280px.svg");
   background-color: #0d3c3e;
   color: white;
   /* padding-left: 100px;
@@ -250,14 +250,14 @@ img {
   text-align: center;
 }
 .frige {
-  background-image: url(/images/cold.png);
+  background-image: url(../images/cold.png);
   background-size: 100px;
   background-position-x: left;
   background-position-y: top;
   background-repeat: no-repeat;
 }
 .climat {
-  background-image: url(/images/air-conditioner.png);
+  background-image: url(../images/air-conditioner.png);
   background-size: 100px;
   background-position-x: left;
   background-position-y: top;

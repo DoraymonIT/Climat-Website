@@ -32,63 +32,7 @@
   <body>
     <div id="loading"></div>
     <div class="container-fluid page">
-      <div class="row" style="padding-top: 30px; text-align: center">
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
-          <i class="fa fa-envelope"></i>
-          <a href="mailto:froid.inter@gmail.com">froid.inter@gmail.com</a>
-        </div>
-        <div class="col-md-3">
-          <i class="fa fa-phone"></i> <a href="tel:+212600626950">+212600626950</a>  &  
-          <a href="tel:+212672309296">+212672309296</a>
-        </div>
-        <div class="col-md-4">
-          <i class="fa fa-location-arrow"></i> Quartier Beausejour 5 N 5, 
-          Tanger
-        </div>
-        <div class="col-md-1"></div>
-      </div>
-      <hr />
-      <div class="row" style="text-align: center">
-        <div class="col-md-3">
-          <a href="index.html">
-            <img
-            src="../images/logo 1.png"
-              class="img"
-              alt="logo"
-              height="85px"
-            />
-            <span id="titlee">FROID INTER</span></a
-          >
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a href="index.html"> Accueil</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="index.html#services"> Services</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="NosProduits.html"> Produits</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="gallery.html"> Galerie</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="clients.html"> Clients</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="fournisseurs.html"> Fournisseurs</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="evolution-charts.html"> Chiffres</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="AboutUs.html"> Équipe</a>
-        </div>
-        <div class="col-md-1 cool-link menu">
-          <a class="blane" href="contact.html"> Contact</a>
-        </div>
-      </div>
+<?php include_once('header.php'); ?>
       <br />
 
       <div class="row" style="background-color: #457879">
@@ -104,7 +48,7 @@
           <span id="saw"> <span id="fc"></span></span>
           <br />
           <br />
-          <a style="color: white" href="contact.html">
+          <a style="color: white" href="contact.php">
             <button class="btn btn-info btn-custom">Contactez-Nous</button></a
           >
         </h4>
@@ -112,18 +56,18 @@
       <br />
       <div class="row" style="padding-left: 20px; padding-right: 20px">
         <div class="col-md-1" style="padding-top: 55px; text-align: right">
-          <img src="/images/cold.png" width="60px" />
+          <img src="../images/cold.png" width="60px" />
         </div>
         <div class="col-md-10">
           <!-- <h3 style="padding: 40px; text-align: center">Pourqoui Nous ?</h3> -->
           <!-- <br /> -->
           <div class="row itar" style="text-align: center">
             <div class="col-md-4" style="float: left">
-              <img src="/images/guarantee.png" width="40px" />
+              <img src="../images/guarantee.png" width="40px" />
               <h6>Garantie Satisfaite</h6>
             </div>
             <div class="col-md-4">
-              <img src="/images/2303790.svg" width="40px" />
+              <img src="../images/2303790.svg" width="40px" />
               <h5>
                 <span class="badge badge-pill badge-warning"
                   >24h / 24 et 7j / 7</span
@@ -131,20 +75,20 @@
               </h5>
             </div>
             <div class="col-md-4" style="float: right">
-              <img src="/images/air-conditioner 2.png" width="40px" />
+              <img src="../images/air-conditioner 2.png" width="40px" />
               <h6>Installation rapide et efficace</h6>
             </div>
           </div>
         </div>
         <div class="col-md-1">
-          <img src="/images/air-conditioner.png" width="60px" />
+          <img src="../images/air-conditioner.png" width="60px" />
         </div>
       </div>
 
       <div class="row" id="services">
         <div class="col-md-12">
           <h3 style="padding: 20px; text-align: center">
-            <img src="/images/snowflake.png" width="40px" /> Nos Services
+            <img src="../images/snowflake.png" width="40px" /> Nos Services
           </h3>
           <br />
 
@@ -154,7 +98,7 @@
                 L’installation, le dépannage et la maintenance
               </h4>
               <img
-                src="/images/service1.png"
+                src="../images/service1.png"
                 width="100%"
                 alt="service"
                 style="border-radius: 8px"
@@ -203,7 +147,7 @@
       <div class="row">
         <div class="col-md-4">
           <img
-            src="/images/service3.jpg"
+            src="../images/service3.jpg"
             width="100%"
             alt="service"
             style="border-radius: 8px"
@@ -216,7 +160,7 @@
         </div>
         <div class="col-md-4">
           <img
-            src="/images/service2.jpg"
+            src="../images/service2.jpg"
             width="100%"
             alt="service"
             style="border-radius: 8px"
@@ -228,7 +172,7 @@
         </div>
         <div class="col-md-4">
           <img
-            src="/images/service3.jpg"
+            src="../images/service3.jpg"
             width="100%"
             alt="service"
             style="border-radius: 8px"
@@ -359,126 +303,7 @@
     </div>
     <br /> -->
 
-      <div class="row footer-bar">
-        <div class="col-md-4" style="text-align: center">
-          <h3>A propos de nous</h3>
-          <p style="text-align: left; line-height: 35px; font-weight: bold">
-            Le Frigoriste fournit un service de dépannage efficace et réactif
-            24h / 24 et 7j / 7. Nous proposons également des programmes de
-            maintenance complets pour garantir une durée de vie plus longue et
-            une meilleure efficacité des équipements.
-          </p>
-          <hr />
-          <h6><i class="fa fa-envelope"></i> froid.inter@gmail.com</h6>
-          <hr />
-          <h6><i class="fa fa-phone"></i> +212600626950 & +212672309296</h6>
-          <hr />
-          <h6>
-            <i class="fa fa-location-arrow"></i> Quartier Beausejour 5 N 5,
-            Tanger .
-          </h6>
-
-          <br />
-          <!-- <div class="row s-media" data-aos="fade-up"
-data-aos-anchor-placement="center-bottom"  >
-      <div class="col-md-3">
-        <a class="s-mF" href="https://www.google.com" target="_blank"
-          ><i class="fa fa-facebook" aria-hidden="true"></i
-        ></a>
-      </div>
-      <div class="col-md-3">
-        <a class="s-mF" href="google.com" target="_blank">
-          <i class="fa fa-instagram" aria-hidden="true"></i
-        ></a>
-      </div>
-      <div class="col-md-3">
-        <a class="s-mF" href="google.com" target="_blank">
-          <i class="fa fa-snapchat" aria-hidden="true"></i
-        ></a>
-      </div>
-      <div class="col-md-3">
-        <a class="s-mF" href="google.com" target="_blank">
-          <i class="fa fa-youtube" aria-hidden="true"></i
-        ></a>
-      </div>
-    </div> -->
-        </div>
-        <div class="col-md-4">
-          <h3 style="text-align: center">Liens utiles</h3>
-          <br />
-          <a href="NosProduits.html" style="color: cadetblue">
-            <h6 class="lien1" style="font-weight: bold">Nos Produits</h6></a
-          >
-          <a href="clients.html" style="color: cadetblue">
-            <h6 class="lien1" style="font-weight: bold">Nos Clients</h6></a
-          >
-          <a href="fournisseurs.html" style="color: cadetblue">
-            <h6 class="lien1" style="font-weight: bold">Nos Fournisseurs</h6></a
-          >
-          <a href="gallery.html" style="color: cadetblue">
-            <h6 class="lien1" style="font-weight: bold">Nos Galerie de projets</h6></a
-          >
-          <a href="evolution-charts.html" style="color: cadetblue">
-            <h6 class="lien1" style="font-weight: bold">Nos Chiffres</h6></a
-          >
-          <a href="AboutUs.html" style="color: cadetblue">
-            <h6 class="lien1" style="font-weight: bold">Que nous sommes ?</h6></a
-          >
-        </div>
-        <div class="col-md-4" style="text-align: center">
-          <h3>Heures de travail</h3>
-          <div class="aw9aat">
-            <!-- <h5>Heures de travail</h5> -->
-
-            <h6>Lundi-Vendredi</h6>
-            <hr />
-            <h5>9:00 AM - 21:00 PM</h5>
-            <br />
-            <h6>Samedi et Dimanche</h6>
-            <hr />
-            <h5>8:00 AM - 22:00 PM</h5>
-          </div>
-          <br />
-          <div class="row" style="float: left; padding-top: 15px">
-            <h5>Restez en contact :</h5>
-          </div>
-          <div class="row" style="float: right">
-            <a
-              class="s-m"
-              href="https://web.facebook.com/FROID-INTER-118342640026522/"
-              target="_blank"
-              ><i class="fa fa-facebook" aria-hidden="true"></i
-            ></a>
-            <a
-              class="s-m"
-              href="https://www.instagram.com/froidinter/"
-              target="_blank"
-            >
-              <i class="fa fa-instagram" aria-hidden="true"></i
-            ></a>
-            <a class="s-m" href="https://www.google.com" target="_blank">
-              <i class="fa fa-twitter" aria-hidden="true"></i
-            ></a>
-            <a
-              class="s-m"
-              href="https://youtube.com/channel/UCwnahbZRmqjjWsCGfvYbH_A"
-              target="_blank"
-            >
-              <i class="fa fa-youtube" aria-hidden="true"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <hr />
-      <p style="float: left; padding: 5px">
-        Tous les droits sont réservés au FROID INTER
-        <i
-          class="fa fa-copyright"
-          style="font-size: 15px"
-          aria-hidden="true"
-        ></i>
-        2020
-      </p>
+     <?php include_once('footer.php') ?>
     </div>
   </body>
   <a

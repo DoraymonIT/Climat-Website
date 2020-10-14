@@ -40,7 +40,7 @@
     >
       <div class="row">
         <div class="col-md-3">
-          <a href="index.html">
+          <a href="index.php">
             <img
               src="../images/logo 1.png"
               class="img"
