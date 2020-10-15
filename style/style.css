@@ -321,6 +321,12 @@ img {
 .detailles {
   padding-top: 40px;
 }
+.voila {
+  background-color: cadetblue;
+  padding: 5px;
+  border-radius: 6px;
+  margin-bottom: 7px;
+}
 .titreee {
   background-color: cadetblue;
   padding: 10px;

@@ -1,3 +1,7 @@
+<?php
+require_once('database_connect.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,104 +50,22 @@
       </div>
 
       <div class="row" style="padding-top: 60px;padding-left: 5px;padding-right: 5px;">
-        <div class="col-md-6 client">
-          <h2>Client 1</h2>
-          <br />
-          <div class="row">
-            <div class="col-md-4 logo1"></div>
-            <div class="col-md-6">
+      <?php
+$clients = $base->query('SELECT * FROM client_fournisseur WHERE categorie="Client"');
+foreach ($clients as $data) :
+?>
+        <div class="col-md-4 client" style="text-align: center;">
+          <h2><?php echo $data['nom'] ?></h2>
+         <img  width="150px"  src='<?php echo $data['image']; ?>'>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-                adipisci quisquam quae cupiditate asperiores necessitatibus
-                nemo, molestiae, soluta nobis quia eum exercitationem beatae
-                atque a, recusandae libero facilis esse aut?
+              <?php echo $data['description'] ?>
               </p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div class="col-md-6 client">
-          <h2>Client 2</h2>
-          <br />
-          <div class="row">
-            <div class="col-md-4 logo2"></div>
-            <div class="col-md-6">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-                adipisci quisquam quae cupiditate asperiores necessitatibus
-                nemo, molestiae, soluta nobis quia eum exercitationem beatae
-                atque a, recusandae libero facilis esse aut?
-              </p>
-            </div>
-          </div>
-          <hr />
+            
+          </div>      <hr />    
+<?php endforeach; ?>
+        
         </div>
 
-        <div class="col-md-6 client">
-          <h2>Client 3</h2>
-          <br />
-          <div class="row">
-            <div class="col-md-4 logo4"></div>
-            <div class="col-md-6">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-                adipisci quisquam quae cupiditate asperiores necessitatibus
-                nemo, molestiae, soluta nobis quia eum exercitationem beatae
-                atque a, recusandae libero facilis esse aut?
-              </p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div class="col-md-6 client">
-          <h2>Client 4</h2>
-          <br />
-          <div class="row">
-            <div class="col-md-4 logo2"></div>
-            <div class="col-md-6">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-                adipisci quisquam quae cupiditate asperiores necessitatibus
-                nemo, molestiae, soluta nobis quia eum exercitationem beatae
-                atque a, recusandae libero facilis esse aut?
-              </p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <br />
-        <div class="col-md-6 client">
-          <h2>Client 5</h2>
-          <br />
-          <div class="row">
-            <div class="col-md-4 logo1"></div>
-            <div class="col-md-6">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-                adipisci quisquam quae cupiditate asperiores necessitatibus
-                nemo, molestiae, soluta nobis quia eum exercitationem beatae
-                atque a, recusandae libero facilis esse aut?
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 client">
-          <h2>Client 6</h2>
-          <br />
-          <div class="row">
-            <div class="col-md-4 logo4"></div>
-            <div class="col-md-6">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
-                adipisci quisquam quae cupiditate asperiores necessitatibus
-                nemo, molestiae, soluta nobis quia eum exercitationem beatae
-                atque a, recusandae libero facilis esse aut?
-              </p>
-            </div>
-          </div>
-        </div>
-        <br />
-      </div>
       <br />
       <?php include_once('footer.php') ?>
     </div>

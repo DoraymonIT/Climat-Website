@@ -1,6 +1,8 @@
 <?php
+    ob_start();
     session_start();
-    $db = mysqli_connect('localhost', 'id15118846_climatiseur', 'oYM5!C{p$^Vp7FY<', 'id15118846_climatt');
+    $db = mysqli_connect('localhost', 'root', '', 'climat');
+        // $db = mysqli_connect('localhost', 'id15118846_climatiseur', 'oYM5!C{p$^Vp7FY<', 'id15118846_climatt');
 
     if(!$db) {
         die('Connection failed: ' . mysqli_connect_error());
@@ -28,8 +30,4 @@
         }
     }
 ?>
-<!-- Q$B8ZbGs_mPRe.8
 
-climat
-
-est db4free.net et le port est 3306. -->

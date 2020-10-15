@@ -1,3 +1,12 @@
+<?php
+require_once('database_connect.php');
+ob_start();
+session_start();
+if (empty($_SESSION['username'])) {
+  header('location: login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +31,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link
       rel="shortcut icon"
       href="../images/air-conditioner 1.png"
@@ -34,26 +43,53 @@
     />
 
     <title>FROID INTER Admin | Gestions des clients / fournisseurs</title>
+    <style>
+    .voila {
+      background-color: cadetblue;
+      padding: 5px;
+      border-radius: 6px;
+      margin-bottom: 7px;
+    }
+
+  </style>
   </head>
 
   <body>
     <div class="container-fluid" style="padding: 20px">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="index.php">
+          <img src="../images/logo 1.png" class="img" alt="logo" height="85px" />
+          <span id="titlee">FROID INTER</span></a>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-5">
+        <div style="padding: 30px">
+
+          <?php if (isset($_SESSION['username'])) : ?>
+            <h6> <i class="fa fa-user-circle" aria-hidden="true"></i> Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
+            <p><a href="logout.php" class="btn btn-primary" href="#" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></p>
+          <?php endif ?>
+        </div>
+      </div>
+    </div>
+    <hr>
       <div class="row">
         <div class="col-md-5">
           <h5>Ajouter Un nouveau Client / Fournisseur</h5>
           <br />
-          <form action="" method="post">
+          <form method="post" action="ajout-member.php" enctype="multipart/form-data">
             <input
-              style="padding-bottom: 18px"
-              type="file"
-              required
+           
+              type="file" class="voila"
+               name="image"
               placeholder="Logo"
             />
             <br />
             <label for="">Nom du Client / Fournisseur</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control" name="nom"
               placeholder="Libelle du produit"
               required
             />
@@ -61,28 +97,28 @@
             <label for="">Reference du Client / Fournisseur</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control" 
               placeholder="Libelle du produit"
-              required
+              name="reference"
             />
             <br />
 
             <label for="">Catégorie</label>
-            <select class="form-control" required>
-              <option>Choisir...</option>
-              <option>Client</option>
-              <option>Fournisseur</option>
+            <select class="form-control" required name="categorie">
+              <option value=" " >Choisir...</option>
+              <option value="Client">Client</option>
+              <option value="Fournisseur">Fournisseur</option>
             </select>
 
             <br />
             <label for="">Description du Client / Fournisseur</label>
             <textarea
               class="form-control"
-              rows="4"
+              rows="4" name="description"
               placeholder="Description du produit"
             ></textarea>
             <br />
-            <button type="submit" class="btn btn-success">Ajouter</button>
+            <button type="submit" name="submit-cl-fr" class="btn btn-success">Ajouter</button>
           </form>
           <br />
         </div>
@@ -90,37 +126,35 @@
           <table class="table table-hover table-striped">
             <thead class="thead-inverse">
               <tr>
-                <th>#Id</th>
+              <th>Image</th>
                 <th>Reference</th>
+                <th>Nom</th>
                 <th>Catégorie</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td scope="row">1</td>
-                <td>Sofitel</td>
-                <td>Client</td>
-                <td>
-                  <button
-                    type="submit"
-                    class="btn btn-sm btn-info"
-                    data-toggle="modal"
-                    data-target=".bd-example-modal-lg"
-                  >
-                    <i class="fa fa-info-circle" aria-hidden="true"></i>
-                  </button>
-                  <button
-                    type="submit"
-                    class="btn btn-sm btn-danger"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                  >
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+
+<?php
+$select1 = $base->query('SELECT * FROM client_fournisseur ');
+foreach ($select1 as $data) :
+?>
+  <tr>
+    <!-- <td></td> -->
+    <td style="width: 200px;"><img class="img-fluid" src='<?php echo $data['image']; ?>'></td>
+    <td><?php echo $data['reference'] ?></td>
+    <td><?php echo $data['nom'] ?></td>
+    <td><?php echo $data['categorie'] ?></td>
+    <td> <a href="#" class="open-modal" id="<?php echo $data['id']; ?>">
+        <button type="submit" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </button></a>
+    </td>
+
+  </tr>
+
+<?php endforeach; ?>
+</tbody>
           </table>
         </div>
 

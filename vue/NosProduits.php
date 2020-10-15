@@ -1,3 +1,8 @@
+<?php
+require_once('database_connect.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,84 +55,25 @@
           </h3>
           <br />
           <div class="row">
+          <?php
+$products = $base->query('SELECT * FROM produits ');
+foreach ($products as $data) :
+?>
             <div class="col-md-4">
 
-              <img src="/images/service1.png" width="100%" alt="Produit 1">
+              <img src='<?php echo $data['image']; ?>' style="border-radius: 10px;" width="100%" alt="Produit 1">
               <br>
-              <h4 style="text-align: center;padding-top: 30px;"> <b>Libelle</b></h4>
+              <h4 style="text-align: center;padding-top: 30px;"> <b><?php echo $data['nom']; ?></b></h4>
               <br>
               <h6>
-                <b>  Description</b> :  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam pariatur officia, voluptate
-                 dolorum fugiat corporis alias culpa 
-                 harum mollitia error maxime quasi nobis quidem quo inventore ea vero ipsum!
+                <b>  Description</b> :  <?php echo $data['description']; ?>
               </h6><br>
             </div>
-            <div class="col-md-4">
-
-              <img src="/images/service3.jpg" width="100%" alt="Produit 2">
-              <br>
-              <h4 style="text-align: center;padding-top: 30px;"> <b>Libelle</b> </h4>
-              <br>
-              <h6>
-                <b>  Description</b> :  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam pariatur officia, voluptate
-                 dolorum fugiat corporis alias culpa 
-                 harum mollitia error maxime quasi nobis quidem quo inventore ea vero ipsum!
-              </h6>
-              <br>
-            </div>
-            <div class="col-md-4">
-
-              <img src="/images/service1.png" width="100%" alt="Produit 3">
-              <br>
-              <h4 style="text-align: center;padding-top: 30px;"> <b>Libelle</b> </h4>
-              <br>
-              <h6>
-                <b>  Description</b> :  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam pariatur officia, voluptate
-                 dolorum fugiat corporis alias culpa 
-                 harum mollitia error maxime quasi nobis quidem quo inventore ea vero ipsum!
-              </h6><br>
-            </div>
+            <?php endforeach; ?>
+       
           </div>
           <br>
-          <div class="row">
-            <div class="col-md-4">
-
-              <img src="/images/service1.png" width="100%" alt="Produit 1">
-              <br>
-              <h4 style="text-align: center;padding-top: 30px;"> <b>Libelle</b></h4>
-              <br>
-              <h6>
-                <b>  Description</b> :  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam pariatur officia, voluptate
-                 dolorum fugiat corporis alias culpa 
-                 harum mollitia error maxime quasi nobis quidem quo inventore ea vero ipsum!
-              </h6><br>
-            </div>
-            <div class="col-md-4">
-
-              <img src="/images/service3.jpg" width="100%" alt="Produit 2">
-              <br>
-              <h4 style="text-align: center;padding-top: 30px;"> <b>Libelle</b> </h4>
-              <br>
-              <h6>
-                <b>  Description</b> :  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam pariatur officia, voluptate
-                 dolorum fugiat corporis alias culpa 
-                 harum mollitia error maxime quasi nobis quidem quo inventore ea vero ipsum!
-              </h6>
-              <br>
-            </div>
-            <div class="col-md-4">
-
-              <img src="/images/service1.png" width="100%" alt="Produit 3">
-              <br>
-              <h4 style="text-align: center;padding-top: 30px;"> <b>Libelle</b> </h4>
-              <br>
-              <h6>
-                <b>  Description</b> :  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quam pariatur officia, voluptate
-                 dolorum fugiat corporis alias culpa 
-                 harum mollitia error maxime quasi nobis quidem quo inventore ea vero ipsum!
-              </h6><br>
-            </div>
-          </div>
+         
         </div>
       </div>
       <br />

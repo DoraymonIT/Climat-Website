@@ -109,20 +109,22 @@
       </div>
       <br />
 
-      <div class="row">
+      <div class="row"> 
         <div class="col-md-6">
+        <form action="ajout-member.php" method="post">
           <h1  style="    text-align: center;
           background-color: cadetblue;
           padding: 20px;
           color: white;">Contactez-Nous</h1>
           <br />
           <div class="row">
+           
             <div class="col-md-6">
               <label>Nom Complet</label>
               <input
                 class="form-control form-control-lg"
                 type="text"
-                placeholder="Nom Complet*"
+                placeholder="Nom Complet*" name="nom"
                 required
               />
             </div>
@@ -130,8 +132,8 @@
               <label>é-mail</label>
               <input
                 class="form-control form-control-lg"
-                type="email"
-                placeholder="Email"
+                type="email" name="email"
+                placeholder="Email" 
               />
             </div>
           </div>
@@ -141,7 +143,7 @@
               <label> Téléphone </label>
               <input
                 class="form-control form-control-lg"
-                type="text"
+                type="text" name="phone"
                 placeholder="Telephone*"
                 required
               />
@@ -150,7 +152,7 @@
               <label> Sujet </label>
               <input
                 class="form-control form-control-lg"
-                type="text"
+                type="text" name="sujet"
                 placeholder="Sujet*"
                 required
               />
@@ -162,9 +164,9 @@
               <label>Adresse</label>
               <textarea
                 class="form-control form-control-lg"
-                type="text"
+                type="text" name="adress"
                 placeholder="Adresse*"
-                required
+            
               ></textarea>
             </div>
           </div>
@@ -172,12 +174,10 @@
           <div class="row">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-              <a href="#">
-                <h5 class="dash">Envoyer</h5>
-              </a>
+              <button style="padding: 15px;" class="btn btn-info btn-block" type="submit" name="submit-contact" >Envoyer</button>
             </div>
             <div class="col-md-4"></div>
-          </div>
+          </div></form>
         </div>
         <div class="col-md-6">
           <img

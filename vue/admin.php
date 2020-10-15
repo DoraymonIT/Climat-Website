@@ -1,5 +1,6 @@
 <?php
- session_start();
+    ob_start();
+    session_start();
     if(empty($_SESSION['username'])) {
         header('location: login.php');
     }
@@ -61,7 +62,7 @@
           </div>
         </div>
       </div>
-
+<hr>
       <div
         class="row"
         style="padding-top: 140px; padding-bottom: 100px; text-align: center;font-weight: bold;"
@@ -75,7 +76,7 @@
         </div>
 
         <div class="col-md-4 ">
-          <a href="admin-produits.html">  <div class="sha"
+          <a href="admin-produits.php">  <div class="sha"
             style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
           > 
             <i class="fa fa-product-hunt" aria-hidden="true"></i> Gestion des
@@ -83,7 +84,7 @@
           </div> </a> <br />
         </div>
         <div class="col-md-4">
-          <a href="gallery-admin.html">   <div class="sha"
+          <a href="gallery-admin.php">   <div class="sha"
             style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
           > 
             <i class="fa fa-picture-o" aria-hidden="true"></i> Gestion de
@@ -92,7 +93,7 @@
         </div>
         <br />
         <div class="col-md-4">
-          <a href="client-fournisseur-admin.html">  <div class="sha"
+          <a href="client-fournisseur-admin.php">  <div class="sha"
             style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
           > 
             <i class="fa fa-user-o" aria-hidden="true"></i> Gestion de Clients /
@@ -101,7 +102,7 @@
         </div>
 
         <div class="col-md-4">
-          <a href="evolution-admin.html">  <div class="sha"
+          <a href="evolution-admin.php">  <div class="sha"
             style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
           >
             <i class="fa fa-pie-chart" aria-hidden="true"></i> Gestion des
@@ -109,7 +110,7 @@
           </div> </a> <br />
         </div>
         <div class="col-md-4">
-          <a href="contact-admin.html">   <div class="sha"
+          <a href="contact-admin.php">   <div class="sha"
             style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
           >
            <i class="fa fa-envelope-open" aria-hidden="true"></i> Gestion de

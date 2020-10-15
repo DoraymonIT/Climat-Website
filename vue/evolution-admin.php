@@ -1,3 +1,12 @@
+<?php
+require_once('database_connect.php');
+ob_start();
+session_start();
+if (empty($_SESSION['username'])) {
+  header('location: login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,7 +31,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link
       rel="shortcut icon"
       href="../images/air-conditioner 1.png"
@@ -38,13 +47,38 @@
 
   <body>
     <div class="container-fluid" style="padding: 20px">
+    <div class="row">
+        <div class="col-md-3">
+          <a href="index.php">
+            <img
+              src="../images/logo 1.png"
+              class="img"
+              alt="logo"
+              height="85px"
+            />
+            <span id="titlee">FROID INTER</span></a
+          >
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-5">
+          <div style="padding: 30px">
+           
+             <?php if (isset($_SESSION['username'])): ?>
+                  <h6> <i class="fa fa-user-circle" aria-hidden="true"></i>  Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
+                  <p><a href="logout.php" class="btn btn-primary" href="#" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></p>
+              <?php endif ?>
+          </div>
+        </div>
+      </div>
+<hr>
+
       <div class="row">
         <div class="col-md-5">
           <h5>Ajouter Un nouveau chiffre d affaire</h5>
           <br />
-          <form action="" method="post">
+          <form method="post" action="ajout-member.php">
             <label for="">L année</label>
-            <select class="form-control" name="" id="">
+            <!-- <select class="form-control" name="annee" >
               <option>Choisir...</option>
               <option>2026</option>
               <option>2025</option>
@@ -64,17 +98,26 @@
               <option>2011</option>
               <option>2010</option>
               <option>2009</option>
-            </select>
+            </select> -->
+<?php
+$already_selected_value = 2050;
+$earliest_year = 1991;
 
+print '<select class="form-control" name="annee" >';
+foreach (range(date('Y'), $earliest_year) as $x) {
+    print '<option value="'.$x.'"'.($x === $already_selected_value ? ' selected="selected"' : '').'>'.$x.'</option>';
+}
+print '</select>';
+?>
             <br />
-            <label for="">Combien</label>
+            <label for="">Combien (MAD : DH)</label>
             <input
               class="form-control"
-             type="text"
-              placeholder="40.000 DH ( MAD )"
+             type="text" name="combien"
+              placeholder="40000 DH ( MAD )"
             />
             <br />
-            <button type="submit" class="btn btn-success">Ajouter</button>
+            <button type="submit" name="submit-ca" class="btn btn-success">Ajouter</button>
           </form>
           <br />
         </div>
@@ -89,32 +132,29 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td scope="row">1</td>
-                <td>2017</td>
-                <td>
-                 34.900
-                </td>
-                <td>
-                  <button
-                    type="submit"
-                    class="btn btn-sm btn-info"
-                    data-toggle="modal"
-                    data-target=".bd-example-modal-lg"
-                  >
-                    <i class="fa fa-info-circle" aria-hidden="true"></i>
-                  </button>
-                  <button
-                    type="submit"
-                    class="btn btn-sm btn-danger"
-                    data-toggle="modal"
-                    data-target="#exampleModalCenter"
-                  >
-                    <i class="fa fa-trash" aria-hidden="true"></i>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
+
+<?php
+$select1 = $base->query('SELECT * FROM ca ');
+foreach ($select1 as $data) :
+
+?>
+  <tr>
+ 
+    <td scope="row"><?php echo $data['id'] ?></td>
+    <td><?php echo $data['annee'] ?></td>
+    <td><?php echo number_format(($data['combien'] / 100), 2, '.', ','); ?> 
+   </td>
+    <td>
+      <a href="delete-item.php?id=<?php echo $data['id'];
+                                  ?>">
+        <button type="submit" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </button></a>
+    </td>
+  </tr>
+
+<?php endforeach; ?>
+</tbody>
           </table>
         </div>
 
