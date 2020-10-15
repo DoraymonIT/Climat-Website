@@ -122,7 +122,7 @@ print '</select>';
           <br />
         </div>
         <div class="col-md-7">
-          <table class="table table-hover table-striped">
+          <table class="table table-hover table-striped table-bordered">
             <thead class="thead-inverse">
               <tr>
                 <th>#Id</th>
@@ -142,12 +142,12 @@ foreach ($select1 as $data) :
  
     <td scope="row"><?php echo $data['id'] ?></td>
     <td><?php echo $data['annee'] ?></td>
-    <td><?php echo number_format(($data['combien'] / 100), 2, '.', ','); ?> 
+    <td><?php echo number_format(($data['combien']), 2, '.', ','); ?> 
    </td>
     <td>
-      <a href="delete-item.php?id=<?php echo $data['id'];
-                                  ?>">
-        <button type="submit" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+    <a href="delete-evolu.php?id=<?php echo $data['id'];
+                                              ?>">
+        <button type="submit" class="btn btn-sm btn-danger" >
           <i class="fa fa-trash" aria-hidden="true"></i>
         </button></a>
     </td>

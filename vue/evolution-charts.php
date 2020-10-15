@@ -52,7 +52,7 @@ require_once('database_connect.php');
               <h5> <?php $total = $base->query('SELECT sum(combien) FROM ca ');
                     $s = 0;
                     foreach ($total as $c) :  ?>
-                  <th><?php echo number_format(($c['sum(combien)'] / 100), 2, '.', ',');; ?></th> <?php endforeach; ?> Dirham Marocain (MAD)</h5>
+                  <th><?php echo number_format(($c['sum(combien)']), 2, '.', ',');; ?></th> <?php endforeach; ?> Dirham Marocain (MAD)</h5>
             </a>
           </div>
           <div class="col-md-4">

@@ -55,15 +55,15 @@ if (empty($_SESSION['username'])) {
             background-color: cadetblue;
             padding: 20px;
             color: white;"> <i class="fas fa-envelope-open-text    "></i> Gestion des messages des clients du site web</h4>
-        <table class="table table-hover table-striped">
+        <table class="table table-hover table-striped table-bordered table-info">
           <thead class="thead-inverse">
             <tr>
-              <th>#Sujet</th>
-              <th>Nom Complet</th>
-              <th>Email</th>
-              <th>Telephone</th>
-              <th>Adresse</th>
-              <th>Etat</th>
+              <th> <i class="fa fa-pencil" aria-hidden="true"></i> Sujet</th>
+              <th> <i class="fa fa-user" aria-hidden="true"></i> Nom Complet</th>
+              <th> <i class="fas fa-envelope-open    "></i> Email</th>
+              <th> <i class="fas fa-phone    "></i> Telephone</th>
+              <th> <i class="fa fa-map-marker" aria-hidden="true"></i> Adresse</th>
+              <th> <i class="fas fa-mail-bulk    "></i> Etat</th>
 
             </tr>
           </thead>
@@ -83,7 +83,7 @@ if (empty($_SESSION['username'])) {
                 <td><?php echo $data['phone'] ?></td>
                 <td><?php echo $data['adress'] ?></td>
                 <td>
-                  <span class="badge badge-warning">Fait</span>
+                  <span class="badge badge-success"> Vu</span>
                 </td>
 
               </tr>
@@ -93,62 +93,7 @@ if (empty($_SESSION['username'])) {
         </table>
       </div>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="height: auto ;">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">
-                Dialogue de Confirmation
-              </h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body" style="overflow-y: hidden;">
-              Voulez-Vous Vraiment supprimer ce produit?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                Annuler
-              </button>
-              <button type="button" class="btn btn-primary">
-                Oui, je veux
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Nom produit</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-md-5">
-                  <img src="../images/service1.png" width="100%" />
-                </div>
-                <div class="col-md-7">
-                  <h4>Titre de Libelle : Libelle 1</h4>
-                  <br />
-                  <h4>Description :</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Modi in aliquid fugiat sed rem deserunt culpa harum
-                    quisquam quidem porro hic accusantium numquam, doloremque
-                    quaerat natus laborum fugit. Non, ex.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </body>

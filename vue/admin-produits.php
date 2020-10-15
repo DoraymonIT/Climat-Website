@@ -107,7 +107,7 @@ if (empty($_SESSION['username'])) {
           </form> <br>
         </div>
         <div class="col-md-7">
-          <table class="table table-hover table-striped">
+          <table class="table table-hover table-striped table-bordered">
             <thead class="thead-inverse">
               <tr>
                 <th>Image</th>
@@ -127,8 +127,9 @@ foreach ($products as $data) :
     <td style="width: 200px;"><img class="img-fluid" src='<?php echo $data['image']; ?>'></td>
     <td><?php echo $data['nom'] ?></td>
     <td><?php echo $data['description'] ?></td>
-    <td> <a href="#" class="open-modal" id="<?php echo $data['id']; ?>">
-        <button type="submit" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+    <td>  <a href="delete-produit.php?id=<?php echo $data['id'];
+                                              ?>">
+        <button type="submit" class="btn btn-sm btn-danger" >
           <i class="fa fa-trash" aria-hidden="true"></i>
         </button></a>
     </td>

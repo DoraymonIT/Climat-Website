@@ -1,4 +1,10 @@
-<?php require_once('database_connect.php');
+<?php
+require_once('database_connect.php');
+ob_start();
+session_start();
+if (empty($_SESSION['username'])) {
+  header('location: login.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -22,6 +28,23 @@
 
 <body>
   <div class="container-fluid" style="padding: 20px">
+  <div class="row">
+      <div class="col-md-3">
+        <a href="index.php">
+          <img src="../images/logo 1.png" class="img" alt="logo" height="85px" />
+          <span id="titlee">FROID INTER</span></a>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-5">
+        <div style="padding: 30px">
+          <?php if (isset($_SESSION['username'])) : ?>
+            <h6> <i class="fa fa-user-circle" aria-hidden="true"></i> Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
+            <p><a href="logout.php" class="btn btn-primary" href="#" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></p>
+          <?php endif ?>
+        </div>
+      </div>
+    </div>
+    <hr>
     <div class="row">
       <div class="col-md-4">
         <h5>Ajouter Un nouveau membre a équipe</h5>
@@ -47,7 +70,7 @@
         <br />
       </div>
       <div class="col-md-8">
-        <table class="table table-hover table-striped">
+        <table class="table table-hover table-striped table-bordered">
           <thead class="thead-inverse">
             <tr>
               <th>Image</th>
@@ -77,7 +100,7 @@
                     </button></a> -->
                   <a href="delete-item.php?id=<?php echo $data['id'];
                                               ?>">
-                    <button type="submit" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                    <button type="submit" class="btn btn-sm btn-danger" >
                       <i class="fa fa-trash" aria-hidden="true"></i>
                     </button></a>
                 </td>
@@ -88,27 +111,7 @@
         </table>
       </div>
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="height: auto">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">
-                Dialogue de Confirmation
-              </h5>
-            </div>
-            <div class="modal-body" style="overflow-y: hidden">
-              Voulez-Vous Vraiment supprimer cet item?
-            </div>
-            <div class="modal-footer">
-
-              <button type="button" id="delete" class="btn btn-danger">
-                Oui, je veux
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    
      
     </div>
   </div>
