@@ -24,7 +24,7 @@ if (empty($_SESSION['username'])) {
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
-
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   <title>FROID INTER Admin| Ajouter un projet au Galerie</title>
   <style>
     .voila {
@@ -63,10 +63,13 @@ if (empty($_SESSION['username'])) {
         </div>
       </div>
     </div>
-    <hr>
+    <?php include_once('header-admin.php') ?>
     <div class="row">
       <div class="col-md-6">
-        <h5>Ajouter Un nouveau projet au Galerie</h5>
+        <h5  style="    text-align: center;
+          background-color: cadetblue;
+          padding: 10px;
+          color: white;">Ajouter Un nouveau projet au Galerie</h5>
         <br />
         <form method="post" action="ajout-member.php" enctype="multipart/form-data">
           <h6>Images de Gallerie</h6>
@@ -92,7 +95,7 @@ if (empty($_SESSION['username'])) {
       <div class="col-md-6"></div>
       <div class="col-md-12">
         <h6 style="color: red;" class="form-data"></h6>
-        <table class="table table-hover table-striped" style="text-align: center;">
+        <table id="myTable" class="table table-hover table-striped" style="text-align: center;">
           <thead class="thead-inverse">
             <tr>
               <th>Image1</th>
@@ -216,5 +219,11 @@ if (empty($_SESSION['username'])) {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script>
+  
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 </html>

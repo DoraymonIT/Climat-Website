@@ -21,14 +21,20 @@ if (empty($_SESSION['username'])) {
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 
-  <title>FROID INTER Admin | Gestions des membres des équipes</title>
-
+  <title>FROID INTER Admin | Gestion des membres des équipes</title>
+  <style>
+    .col-md-2 {
+      font-size: 12px;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container-fluid" style="padding: 20px">
-  <div class="row">
+    <div class="row">
       <div class="col-md-3">
         <a href="index.php">
           <img src="../images/logo 1.png" class="img" alt="logo" height="85px" />
@@ -36,7 +42,7 @@ if (empty($_SESSION['username'])) {
       </div>
       <div class="col-md-4"></div>
       <div class="col-md-5">
-        <div style="padding: 30px">
+        <div style="padding-top: 30px">
           <?php if (isset($_SESSION['username'])) : ?>
             <h6> <i class="fa fa-user-circle" aria-hidden="true"></i> Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
             <p><a href="logout.php" class="btn btn-primary" href="#" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></p>
@@ -44,15 +50,18 @@ if (empty($_SESSION['username'])) {
         </div>
       </div>
     </div>
-    <hr>
-    <div class="row">
+    <?php include_once('header-admin.php') ?>
+    <div class="row" style="padding-top:20px">
       <div class="col-md-4">
-        <h5>Ajouter Un nouveau membre a équipe</h5>
+        <h5 style="    text-align: center;
+          background-color: cadetblue;
+          padding: 10px;
+          color: white;"> <i class="fas fa-plus-circle    "></i> Ajouter Un nouveau membre a équipe</h5>
         <br />
         <form method="post" action="ajout-member.php" enctype="multipart/form-data">
           <input name="image-bla" id="image-bla" style="padding-bottom: 18px" type="file" required placeholder="Photo" />
           <br />
-          <label for="">Nom du Membre</label>
+          <label for="">Nom Complet du Membre</label>
           <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom Complet" required />
           <!-- <br />
           <label for="">CIN</label>
@@ -70,7 +79,7 @@ if (empty($_SESSION['username'])) {
         <br />
       </div>
       <div class="col-md-8">
-        <table class="table table-hover table-striped table-bordered">
+        <table id="myTable" class="table table-hover table-striped table-bordered">
           <thead class="thead-inverse">
             <tr>
               <th>Image</th>
@@ -89,7 +98,7 @@ if (empty($_SESSION['username'])) {
             ?>
               <tr>
                 <!-- <td></td> -->
-                <td style="width: 200px;"><img class="img-fluid"  src='<?php echo $data['image']; ?>'></td>
+                <td style="width: 200px;"><img class="img-fluid" src='<?php echo $data['image']; ?>'></td>
                 <td scope="row"><?php echo $data['id'] ?></td>
                 <td><?php echo $data['nom'] ?></td>
                 <td><?php echo $data['job'] ?></td>
@@ -100,7 +109,7 @@ if (empty($_SESSION['username'])) {
                     </button></a> -->
                   <a href="delete-item.php?id=<?php echo $data['id'];
                                               ?>">
-                    <button type="submit" class="btn btn-sm btn-danger" >
+                    <button type="submit" class="btn btn-sm btn-danger">
                       <i class="fa fa-trash" aria-hidden="true"></i>
                     </button></a>
                 </td>
@@ -111,8 +120,8 @@ if (empty($_SESSION['username'])) {
         </table>
       </div>
 
-    
-     
+
+
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -123,5 +132,10 @@ if (empty($_SESSION['username'])) {
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 </html>

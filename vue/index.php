@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
 
     <link
       rel="stylesheet"
@@ -15,7 +16,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../style/style.css" />
+  
     <link
       rel="shortcut icon"
       href="../images/air-conditioner 1.png"
@@ -25,7 +26,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="../style/style.css" />
+       <link rel="stylesheet" href="../style/query.css">
     <title>FROID INTER | Installation professionnel des climats au Maroc</title>
   </head>
 
@@ -35,13 +37,13 @@
 <?php include_once('header.php'); ?>
       <br />
 
-      <div class="row" style="background-color: #457879">
-        <img
+      <div class="row baccck" style="background-color: #457879">
+        <!-- <img
           src="../images/home (2).jpg"
           alt="image acceuil"
           id="image"
           width="100%"
-        />
+        /> -->
         <h4 id="definition">
           Une entreprise dynamique de techniciens frigoristes, au service de ses
           clients !

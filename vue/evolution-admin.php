@@ -41,7 +41,7 @@ if (empty($_SESSION['username'])) {
       href="https://fonts.googleapis.com/css2?family=Roboto"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <title>FROID INTER Admin| Gestions des chiffres de l entreprise</title>
   </head>
 
@@ -70,11 +70,14 @@ if (empty($_SESSION['username'])) {
           </div>
         </div>
       </div>
-<hr>
+      <?php include_once('header-admin.php') ?>
 
       <div class="row">
         <div class="col-md-5">
-          <h5>Ajouter Un nouveau chiffre d affaire</h5>
+          <h5  style="    text-align: center;
+          background-color: cadetblue;
+          padding: 10px;
+          color: white;">Ajouter Un nouveau chiffre d affaire</h5>
           <br />
           <form method="post" action="ajout-member.php">
             <label for="">L année</label>
@@ -122,7 +125,7 @@ print '</select>';
           <br />
         </div>
         <div class="col-md-7">
-          <table class="table table-hover table-striped table-bordered">
+          <table id="myTable" class="table table-hover table-striped table-bordered">
             <thead class="thead-inverse">
               <tr>
                 <th>#Id</th>
@@ -263,4 +266,10 @@ foreach ($select1 as $data) :
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"
   ></script>
+  <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 </html>

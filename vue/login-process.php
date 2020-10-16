@@ -17,15 +17,17 @@
         $password = $_POST['password'];
         $hashed_password = md5($password);
 
+        // $query = "SELECT * FROM users WHERE username='$username' AND password='$hashed_password'";
         $query = "SELECT * FROM user WHERE username='$username' AND password='$hashed_password'";
+
                 $result = mysqli_query($db, $query);
         if  (!$result || mysqli_num_rows($result) === 1) {
             $_SESSION['username'] = $username;
-            echo "Yes";
-            
             header('location: admin.php');
         } else {
             echo "Non";
+            $_SESSION['wrong'] = " Oups !! <strong>Email</strong> ou <strong> Mot de passe </strong> Invalide !!";
+
             header('location: login.php');
         }
     }

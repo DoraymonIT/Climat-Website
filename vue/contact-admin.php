@@ -24,7 +24,7 @@ if (empty($_SESSION['username'])) {
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
-
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   <title>FROID INTER Admin| Gestions des Messages de Contact Page</title>
 </head>
 
@@ -47,7 +47,7 @@ if (empty($_SESSION['username'])) {
         </div>
       </div>
     </div>
-    <hr>
+    <?php include_once('header-admin.php') ?>
     <div class="row">
 
       <div class="col-md-12">
@@ -55,7 +55,7 @@ if (empty($_SESSION['username'])) {
             background-color: cadetblue;
             padding: 20px;
             color: white;"> <i class="fas fa-envelope-open-text    "></i> Gestion des messages des clients du site web</h4>
-        <table class="table table-hover table-striped table-bordered table-info">
+        <table id="myTable" class="table table-hover table-striped table-bordered table-info table-responsive-lg">
           <thead class="thead-inverse">
             <tr>
               <th> <i class="fa fa-pencil" aria-hidden="true"></i> Sujet</th>
@@ -64,7 +64,7 @@ if (empty($_SESSION['username'])) {
               <th> <i class="fas fa-phone    "></i> Telephone</th>
               <th> <i class="fa fa-map-marker" aria-hidden="true"></i> Adresse</th>
               <th> <i class="fas fa-mail-bulk    "></i> Etat</th>
-
+              <th> <i class="fa fa-adjust" aria-hidden="true"></i> Action</th>
             </tr>
           </thead>
           <tbody>
@@ -77,7 +77,7 @@ if (empty($_SESSION['username'])) {
                 <td><?php echo $data['sujet'] ?></td>
                 <td><?php echo $data['nom'] ?></td>
                 <td> <?php if (empty($data['email'])) {
-                        echo "----------";
+                        echo "-----------------";
                       }
                       echo $data['email'] ?></td>
                 <td><?php echo $data['phone'] ?></td>
@@ -85,7 +85,13 @@ if (empty($_SESSION['username'])) {
                 <td>
                   <span class="badge badge-success"> Vu</span>
                 </td>
-
+                <td>
+                <a href="delete-contact.php?id=<?php echo $data['id'];
+                                              ?>">
+                    <button type="submit" class="btn btn-sm btn-danger">
+                      <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button></a>
+                </td>
               </tr>
 
             <?php endforeach; ?>
@@ -100,5 +106,10 @@ if (empty($_SESSION['username'])) {
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 </html>

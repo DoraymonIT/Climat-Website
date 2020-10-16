@@ -105,9 +105,10 @@ a:hover {
   opacity: 0.5;
 }
 #definition {
-  position: absolute;
-  left: 50px;
-  padding-top: 110px;
+  /* position: absolute;
+  left: 50px; */
+  /* padding-top: 110px; */
+  padding: 10px;
   width: 700px;
   font-weight: bolder;
   font-family: system-ui;
@@ -349,16 +350,16 @@ img {
   /* #saw {
     display: none;
   } */
-  #definition {
+  /* #definition {
     position: absolute;
     left: 10px;
-    top: 700px;
-    padding-top: 20px;
+    top: 50px;
+    padding-top: 270px;
     width: 250px;
     font-weight: bold;
     font-family: system-ui;
     font-size: large;
-  }
+  } */
   .btn-custom {
     width: 130px;
     height: 40px;
