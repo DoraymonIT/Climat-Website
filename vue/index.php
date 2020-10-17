@@ -55,7 +55,6 @@
           >
         </h4>
       </div>
-      <br />
       <div class="row" style="padding-left: 20px; padding-right: 20px">
         <div class="col-md-1" style="padding-top: 55px; text-align: right">
           <img src="../images/cold.png" width="60px" />

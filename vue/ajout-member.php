@@ -1,27 +1,29 @@
 <?php require_once 'database_connect.php';
+ ob_start();
+ session_start();
 
- 
 // Submit L Equipe
-if(isset($_POST['submit'])){
-$extensions_arr = array("jpg", "jpeg", "png", "gif");
-$imgName = $_FILES['image-bla']['name'];
-$target_dir = "upload/";
-$target_file = $target_dir . basename($_FILES["image-bla"]["name"]);
-$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-if (in_array($imageFileType, $extensions_arr)) {
-   $name = $_POST['nom'];
-   $job = $_POST['job'];
-   $description = $_POST['description'];
-   $image_base64 = base64_encode(file_get_contents($_FILES['image-bla']['tmp_name']));
-   $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
-   $sql = $base->query('INSERT INTO peoples (nom,description,image,job)VALUES ("' . $name . '","' . $description . '","' . $image . '","' . $job . '")');
-   $newname =  $name . "." . $imageFileType;
-   move_uploaded_file($_FILES['image-bla']['tmp_name'], $target_dir . $newname);
-}
+if (isset($_POST['submit'])) {
+   $extensions_arr = array("jpg", "jpeg", "png", "gif");
+   $imgName = $_FILES['image-bla']['name'];
+   $target_dir = "upload/";
+   $target_file = $target_dir . basename($_FILES["image-bla"]["name"]);
+   $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+   if (in_array($imageFileType, $extensions_arr)) {
+      $name = $_POST['nom'];
+      $job = $_POST['job'];
+      $description = $_POST['description'];
+      $image_base64 = base64_encode(file_get_contents($_FILES['image-bla']['tmp_name']));
+      $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
+      $sql = $base->query('INSERT INTO peoples (nom,description,image,job)VALUES ("' . $name . '","' . $description . '","' . $image . '","' . $job . '")');
+      $newname =  $name . "." . $imageFileType;
+      move_uploaded_file($_FILES['image-bla']['tmp_name'], $target_dir . $newname);
+   }
 
-header('location:equipe-admin.php');}
+   header('location:equipe-admin.php');
+}
 // Submit L Gallery
-if(isset($_POST['submit-gallery'])){
+if (isset($_POST['submit-gallery'])) {
 
    $target_dir = "upload/";
    $target_file1 = $target_dir . basename($_FILES["image1"]["name"]);
@@ -31,33 +33,33 @@ if(isset($_POST['submit-gallery'])){
    $target_file3 = $target_dir . basename($_FILES["image3"]["name"]);
    $imageFileType3 = strtolower(pathinfo($target_file3, PATHINFO_EXTENSION));
 
-      $pays = $_POST['pays'];
-      $client = $_POST['client'];
-      $description = $_POST['description'];
-      $image_base64_1 = base64_encode(file_get_contents($_FILES['image1']['tmp_name']));
-      $image1 = 'data:image/' . $imageFileType1 . ';base64,' . $image_base64_1;
+   $pays = $_POST['pays'];
+   $client = $_POST['client'];
+   $description = $_POST['description'];
+   $image_base64_1 = base64_encode(file_get_contents($_FILES['image1']['tmp_name']));
+   $image1 = 'data:image/' . $imageFileType1 . ';base64,' . $image_base64_1;
 
-      $image_base64_2 = base64_encode(file_get_contents($_FILES['image2']['tmp_name']));
-      $image2 = 'data:image/' . $imageFileType2 . ';base64,' . $image_base64_2;
+   $image_base64_2 = base64_encode(file_get_contents($_FILES['image2']['tmp_name']));
+   $image2 = 'data:image/' . $imageFileType2 . ';base64,' . $image_base64_2;
 
-      $image_base64_3 = base64_encode(file_get_contents($_FILES['image3']['tmp_name']));
-      $image3 = 'data:image/' . $imageFileType3 . ';base64,' . $image_base64_3;
+   $image_base64_3 = base64_encode(file_get_contents($_FILES['image3']['tmp_name']));
+   $image3 = 'data:image/' . $imageFileType3 . ';base64,' . $image_base64_3;
 
-      $sql = $base->query('INSERT INTO gallery (pays,client,image1,image2,image3,description) VALUES ("' . $pays . '","' . $client . '","' . $image1 . '","' . $image2 . '","' . $image3 . '","' . $description . '")');
-         echo "Yes"; 
-              $newname1 =  $client . "1." . $imageFileType1;
-      move_uploaded_file($_FILES['image1']['tmp_name'], $target_dir . $newname1);
-      $newname2 =  $client . "2." . $imageFileType2;
-      move_uploaded_file($_FILES['image2']['tmp_name'], $target_dir . $newname2);
-      $newname3 =  $client . "3." . $imageFileType3;
-      move_uploaded_file($_FILES['image3']['tmp_name'], $target_dir . $newname3);
-      
+   $sql = $base->query('INSERT INTO gallery (pays,client,image1,image2,image3,description) VALUES ("' . $pays . '","' . $client . '","' . $image1 . '","' . $image2 . '","' . $image3 . '","' . $description . '")');
+   echo "Yes";
+   $newname1 =  $client . "1." . $imageFileType1;
+   move_uploaded_file($_FILES['image1']['tmp_name'], $target_dir . $newname1);
+   $newname2 =  $client . "2." . $imageFileType2;
+   move_uploaded_file($_FILES['image2']['tmp_name'], $target_dir . $newname2);
+   $newname3 =  $client . "3." . $imageFileType3;
+   move_uploaded_file($_FILES['image3']['tmp_name'], $target_dir . $newname3);
+
 
 
    header('location:gallery-admin.php');
 }
 // Submit L Client / Fournisseur
-if(isset($_POST['submit-cl-fr'])){
+if (isset($_POST['submit-cl-fr'])) {
    $extensions_arr = array("jpg", "jpeg", "png", "gif");
    $imgName = $_FILES['image']['name'];
    $target_dir = "upload/";
@@ -71,22 +73,18 @@ if(isset($_POST['submit-cl-fr'])){
       $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
       $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
       $sql = $base->query('INSERT INTO client_fournisseur (nom,description,image,reference,categorie)VALUES ("' . $name . '","' . $description . '","' . $image . '","' . $ref . '","' . $cat . '")');
-     if($sql){
-        echo "YES";
-        $newname =  $name. "-".$cat. "." . $imageFileType;
-        move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $newname);
+      if ($sql) {
+         echo "YES";
+         $newname =  $name . "-" . $cat . "." . $imageFileType;
+         move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $newname);
          header('location:client-fournisseur-admin.php');
-     }
-     else{
-        echo "Cliquez retour, et valider a nouveau";
-     }
-  
+      } else {
+         echo "Cliquez retour, et valider a nouveau";
+      }
    }
-
-  
 }
 // Submit L Produits
-if(isset($_POST['submit-produit'])){
+if (isset($_POST['submit-produit'])) {
    $extensions_arr = array("jpg", "jpeg", "png", "gif");
    $imgName = $_FILES['image']['name'];
    $target_dir = "upload/";
@@ -101,23 +99,25 @@ if(isset($_POST['submit-produit'])){
       $newname =  $name . "." . $imageFileType;
       move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $newname);
    }
-   
-   header('location:admin-produits.php');}
+
+   header('location:admin-produits.php');
+}
 
 // Submit CA
-if(isset($_POST['submit-ca'])){
+if (isset($_POST['submit-ca'])) {
 
-      $annee = $_POST['annee'];
-      $combien = $_POST['combien'];
+   $annee = $_POST['annee'];
+   $combien = $_POST['combien'];
 
-      $sql = $base->query('INSERT INTO ca (annee,combien)VALUES ("' . $annee . '","' . $combien . '")');
-    
-   
-   
-   header('location:evolution-admin.php');}
+   $sql = $base->query('INSERT INTO ca (annee,combien)VALUES ("' . $annee . '","' . $combien . '")');
 
-   // Submit CONTACT FORM
-if(isset($_POST['submit-contact'])){
+
+
+   header('location:evolution-admin.php');
+}
+
+// Submit CONTACT FORM
+if (isset($_POST['submit-contact'])) {
 
    $name = $_POST['nom'];
    $adress = $_POST['adress'];
@@ -127,12 +127,16 @@ if(isset($_POST['submit-contact'])){
 
 
    $sql = $base->query('INSERT INTO contact (nom,adress,email,phone,sujet)VALUES ("' . $name . '","' . $adress . '","' . $email . '","' . $phone . '","' . $sujet . '")');
- 
-if($sql){
-echo "Demande a enregistre avec succees : <a href='index.php' >Acceuil</a>";
-}else{
-echo "<h6 style='color:red'>Failed to save , Try Again <a href='contact.php' >Acceuil</a></h6>";
-}
 
-// header('location:evolution-admin.php');
+   if ($sql) {
+      $_SESSION['x'] = " <strong>Merci ,</strong> Votre demande a ete enregistre avec success .";
+      header('location:contact.php');
+      // echo " Demande a enregistre avec succees : <a href='index.php' >Acceuil</a>";
+   } else {
+      $_SESSION['x'] = " <strong>Oupps ,</strong> Erreur, Saisir a nouveau votre demande .  ";
+      header('location:contact.php');
+      // echo "<h6 style='color:red'>Failed to save , Try Again <a href='contact.php' >Contact</a></h6>";
+   }
+
+   // header('location:evolution-admin.php');
 }

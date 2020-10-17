@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+ob_start();
+session_start(); ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -178,8 +181,17 @@
             </div>
             <div class="col-md-4"></div>
           </div></form>
+          <!-- <div class="row">
+            <div class="col-md-12">
+           
+            </div>
+          </div> -->
         </div>
         <div class="col-md-6">
+        <?php if (isset($_SESSION['x'])): ?>
+          <div class="alert alert-success" role="alert" style="text-align: center;">
+               <?php echo $_SESSION['x']?>    </div>
+              <?php endif ?>
           <img
             src="../images/272.jpg"
             id="gone"
@@ -209,5 +221,5 @@
 
   <!-- <script type="module" src="/js/main.js"></script> -->
 
-  <script src="/js/scroll.js"></script>
+  <script src="../js/scroll.js"></script>
 </html>
