@@ -37,10 +37,8 @@ if (empty($_SESSION['username'])) {
       href="../images/air-conditioner 1.png"
       type="image/x-icon"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <title>FROID INTER Admin| Gestions des produits</title>
     <style>

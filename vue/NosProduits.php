@@ -26,10 +26,8 @@ require_once('database_connect.php');
       href="../images/air-conditioner 1.png"
       type="image/x-icon"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+
 
     <title>FROID INTER | Magazine de nos produits .</title>
   </head>
@@ -37,7 +35,7 @@ require_once('database_connect.php');
   <body>
     <div class="container-fluid">
     <?php include_once('header.php'); ?>
-      <br />
+      <!-- <br /> -->
 
       <div class="row" style="padding: 20px">
         <div class="col-md-12">

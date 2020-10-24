@@ -25,10 +25,8 @@ require_once('database_connect.php');
       href="../images/air-conditioner 1.png"
       type="image/x-icon"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+
 
     <title>FROID INTER | Liste de notre chers fidèles clients .</title>
   </head>

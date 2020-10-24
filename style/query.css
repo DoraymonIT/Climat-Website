@@ -1,33 +1,24 @@
 @media (max-width: 780px) {
   #definition {
     padding: 10px;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     width: 300px;
     font-weight: bold;
-    font-family: system-ui;
+    /* font-family: system-ui; */
     font-size: large;
   }
   .baccck {
     background-image: url("../images/home (2).jpg");
-    height: 280px;
     background-size: 100% 100%;
     opacity: 0.89;
-    /* height: fit-content; */
-
     padding: 10px;
 
     background-repeat: no-repeat;
   }
 }
-
 .baccck {
   background-image: url("../images/home (2).jpg");
-  height: 400px;
   background-size: 100% 100%;
   opacity: 0.89;
-  /* height: fit-content; */
-
-  padding: 10px;
-
   background-repeat: no-repeat;
 }

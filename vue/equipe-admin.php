@@ -20,7 +20,8 @@ if (empty($_SESSION['username'])) {
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 
   <title>FROID INTER Admin | Gestion des membres des équipes</title>

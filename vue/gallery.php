@@ -13,7 +13,8 @@ require_once('database_connect.php');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+
 
   <title>
     FROID INTER | Gallerie de nos projets avec des photos exclusives
@@ -53,7 +54,7 @@ require_once('database_connect.php');
 
               <img class="img-fluid" width="100%" alt="" style="border-radius: 8px" src='<?php echo $data['image1']; ?>'>
               <br />
-              <!-- Button trigger modal 1-->
+              <hr>
            <a href="gallery-detail.php?id=<?php echo $data['id'];
                                               ?>">  <button type="button" 
                                               class="btn btn-block btn-detailles"

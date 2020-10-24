@@ -26,10 +26,7 @@
       href="../images/air-conditioner 1.png"
       type="image/x-icon"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
 
     <title>FROID INTER | Dashboard Page</title>
   </head>

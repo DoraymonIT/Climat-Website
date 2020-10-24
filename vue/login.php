@@ -16,7 +16,8 @@ if (!empty($_SESSION['username'])) {
   <link rel="stylesheet" href="../vondor/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+
 
   <title>FROID INTER | Login Page</title>
 </head>
