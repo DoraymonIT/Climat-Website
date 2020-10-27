@@ -23,8 +23,6 @@ require_once('database_connect.php');
 <body>
   <div class="container-fluid">
     <?php include_once('header.php'); ?>
-    <br />
-
     <div class="row" style="background-color: cadetblue; padding: 10px">
       <div class="col-md-12">
         <h3 style="text-align: center; color: white;">
@@ -45,7 +43,6 @@ require_once('database_connect.php');
                   endforeach; ?> Employés</h5>
           </div>
           <div class="col-md-4">
-            <a href="#chiffres" title="Cliquez Ici pour voir plus de detailles sur notre evolution chiffres d affaires">
               <img src="../images/exchange.svg" width="20%" alt="exchange number" />
               <br />
               <br />
@@ -54,7 +51,7 @@ require_once('database_connect.php');
                     $s = 0;
                     foreach ($total as $c) :  ?>
                   <th><?php echo number_format(($c['sum(combien)']), 2, '.', ',');; ?></th> <?php endforeach; ?> Dirham Marocain (MAD)</h5>
-            </a>
+          
           </div>
           <div class="col-md-4">
             <img src="../images/project-management.svg" width="20%" alt="project number" />
@@ -87,14 +84,14 @@ require_once('database_connect.php');
     <?php include_once('footer.php') ?>
   </div>
 </body>
-<!-- <a
+<a
     title="Vers le Haut"
     id="back-to-top"
     href="#"
     class=" back-to-top"
     role="button"
     ><i class="fa fa-chevron-up"></i
-  ></a> -->
+  ></a>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

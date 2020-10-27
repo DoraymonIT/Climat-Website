@@ -21,8 +21,6 @@
   <div id="loading"></div>
   <div class="container-fluid page">
     <?php include_once('header.php'); ?>
-    <br />
-
     <div class="row baccck" style="background-color: #457879">
       <h4 id="definition">
         Une entreprise dynamique de techniciens frigoristes, au service de ses

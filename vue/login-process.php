@@ -17,8 +17,8 @@
         $password = $_POST['password'];
         $hashed_password = md5($password);
 
-        // $query = "SELECT * FROM users WHERE username='$username' AND password='$hashed_password'";
-        $query = "SELECT * FROM user WHERE username='$username' AND password='$hashed_password'";
+        $query = "SELECT * FROM users WHERE username='$username' AND password='$hashed_password'";
+        // $query = "SELECT * FROM user WHERE username='$username' AND password='$hashed_password'";
 
                 $result = mysqli_query($db, $query);
         if  (!$result || mysqli_num_rows($result) === 1) {

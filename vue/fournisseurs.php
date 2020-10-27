@@ -14,56 +14,58 @@ require_once('database_connect.php');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="../style/style.css" />
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet">
 
 
   <title>FROID INTER | Liste de notre chers experts fournisseurs .</title>
 </head>
-<body>
-    <div class="container-fluid">
-    <?php include_once('header.php'); ?>
-      <br />
 
-      <div class="row">
-        <div class="col-md-12">
-          <h3  style="    text-align: center;
+<body>
+  <div class="container-fluid">
+    <?php include_once('header.php'); ?>
+    <div class="row">
+      <div class="col-md-12">
+        <h3 style="    text-align: center;
           background-color: cadetblue;
           padding: 20px;
           color: white;">
-            <i class="fa fa-users" aria-hidden="true"></i> Nos Fournisseurs
-          </h3>
-        </div>
+          <i class="fa fa-users" aria-hidden="true"></i> Nos Fournisseurs
+        </h3>
       </div>
-
-      <div class="row" style="padding-top: 60px;padding-left: 5px;padding-right: 5px;">
-      <?php
-$four = $base->query('SELECT * FROM client_fournisseur WHERE categorie="Fournisseur"');
-foreach ($four as $data) :
-?>
-        <div class="col-md-4 client" style="text-align: center;">
-          <h2><?php echo $data['nom'] ?></h2>
-         <img  width="150px"  src='<?php echo $data['image']; ?>'>
-              <p>
-              <?php echo $data['description'] ?>
-              </p>
-            
-          </div>      <hr />    
-<?php endforeach; ?>
-        
-        </div>
-
-      <br />
-      <?php include_once('footer.php') ?>
     </div>
-  </body>
-<!-- <a
+
+    <div class="row" style="padding-top: 60px;padding-left: 5px;padding-right: 5px;">
+      <?php
+      $four = $base->query('SELECT * FROM client_fournisseur WHERE categorie="Fournisseur"');
+      foreach ($four as $data) :
+      ?>
+        <div class="col-md-4 " >
+        <div class="client" style="text-align: center;">
+          <h2><?php echo $data['nom'] ?></h2>
+          <div style="border-bottom: 2px solid cadetblue;"></div>
+          <img width="150px" src='<?php echo $data['image']; ?>'>
+          <p>
+            <?php echo $data['description'] ?>
+          </p>
+          </div><br>
+        </div>
+        <hr />
+      <?php endforeach; ?>
+
+    </div>
+
+    <br />
+    <?php include_once('footer.php') ?>
+  </div>
+</body>
+<a
     title="Vers le Haut"
     id="back-to-top"
     href="#"
-    class=" back-to-top"
+    class="back-to-top"
     role="button"
     ><i class="fa fa-chevron-up"></i
-  ></a> -->
+  ></a>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

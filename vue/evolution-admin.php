@@ -79,27 +79,6 @@ if (empty($_SESSION['username'])) {
           <br />
           <form method="post" action="ajout-member.php">
             <label for="">L année</label>
-            <!-- <select class="form-control" name="annee" >
-              <option>Choisir...</option>
-              <option>2026</option>
-              <option>2025</option>
-              <option>2024</option>
-              <option>2023</option>
-              <option>2022</option>
-              <option>2021</option>
-              <option>2020</option>
-              <option>2019</option>
-              <option>2018</option>
-              <option>2017</option>
-              <option>2016</option>
-              <option>2015</option>
-              <option>2014</option>
-              <option>2013</option>
-              <option>2012</option>
-              <option>2011</option>
-              <option>2010</option>
-              <option>2009</option>
-            </select> -->
 <?php
 $already_selected_value = 2050;
 $earliest_year = 1991;

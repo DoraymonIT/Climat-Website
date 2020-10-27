@@ -35,7 +35,6 @@
   <body>
     <div class="container-fluid">
     <?php include_once('header.php'); ?>
-<!-- <br> -->
       <div class="row" style="padding: 20px">
         <div class="col-md-12">
           <h3  style="    text-align: center;
@@ -146,14 +145,14 @@
       <?php include_once('footer.php') ?>
     </div>
   </body>
-  <!-- <a
+  <a
     title="Vers le Haut"
     id="back-to-top"
     href="#"
     class=" back-to-top"
     role="button"
     ><i class="fa fa-chevron-up"></i
-  ></a> -->
+  ></a>
   <script
     type="text/javascript"
     src="https://code.jquery.com/jquery-3.2.1.min.js"

@@ -1,5 +1,3 @@
-
-
 var options = {
   strings: ["FROID.", "FROID."],
   typeSpeed: 120,

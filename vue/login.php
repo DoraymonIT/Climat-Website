@@ -75,8 +75,8 @@ if (!empty($_SESSION['username'])) {
           <button id="button1" class="btn btn-block btn-success" type="submit" name="login-submit" onclick="loadingEvent()">
             Se connecter
           </button>
-          <button id="button2" class="btn btn-block btn-success"  disabled style="display: none;">
-            <i class="fa fa-spinner fa-spin"></i> Loading...
+          <button id="button2" class="btn btn-block btn-success" disabled style="display: none;cursor: wait;">
+            <i class="fa fa-spinner fa-spin"></i>
           </button>
 
         </form>

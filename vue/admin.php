@@ -114,6 +114,13 @@
             Messages et FeedBacks
           </div></a>
         </div>
+        <div class="col-md-4">
+          <a href="sup-admin.php">   <div class="sha"
+            style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
+          >
+           <i class="fa fa-exclamation-triangle " aria-hidden="true"></i> Super Admin
+          </div></a>
+        </div>
       </div>
 
       <hr />

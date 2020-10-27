@@ -35,8 +35,6 @@ require_once('database_connect.php');
   <body>
     <div class="container-fluid">
     <?php include_once('header.php'); ?>
-      <!-- <br /> -->
-
       <div class="row" style="padding: 20px">
         <div class="col-md-12">
           <h3
@@ -58,13 +56,12 @@ $products = $base->query('SELECT * FROM produits ');
 foreach ($products as $data) :
 ?>
             <div class="col-md-4">
-
-              <img src='<?php echo $data['image']; ?>' style="border-radius: 10px;" width="100%" alt="Produit 1">
-              <br>
+              <img src='<?php echo $data['image']; ?>' style="border-radius: 10px;" width="100%" alt="Produit <?php echo $data['id']; ?>">
+              <!-- <br> -->
               <h4 style="text-align: center;padding-top: 30px;"> <b><?php echo $data['nom']; ?></b></h4>
               <br>
               <h6>
-                <b>  Description</b> :  <?php echo $data['description']; ?>
+                <b>  Description</b> : <p><?php echo $data['description']; ?> </p>  
               </h6><br>
             </div>
             <?php endforeach; ?>
@@ -78,14 +75,14 @@ foreach ($products as $data) :
       <?php include_once('footer.php') ?>
     </div>
   </body>
-  <!-- <a
+  <a
     title="Vers le Haut"
     id="back-to-top"
     href="#"
-    class=" back-to-top"
+    class="back-to-top"
     role="button"
     ><i class="fa fa-chevron-up"></i
-  ></a> -->
+  ></a>
   <script
     type="text/javascript"
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -93,7 +90,5 @@ foreach ($products as $data) :
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <!-- <script type="module" src="/js/main.js"></script> -->
-  <!-- <script src="../js/chart.js"></script> -->
   <script src="../js/scroll.js"></script>
 </html>

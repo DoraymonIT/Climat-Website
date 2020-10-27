@@ -5,11 +5,11 @@
     outline: 0px none;
   }
 </style>
-<div class="row tof" style="padding: 30px; text-align: center">
+<div class="row tof" style="padding-top: 10px; text-align: center">
   <div class="col-md-1"></div>
   <div class="col-md-3" style="
     padding-bottom: 10px;
-"> 
+">
     <i class="fa fa-envelope"></i>
     <a href="mailto:froid.inter@gmail.com">froid.inter@gmail.com</a>
   </div>
@@ -25,10 +25,10 @@
   </div>
   <div class="col-md-1"></div>
 </div>
-<hr />
-
-
-<nav class="navbar navbar-expand-lg ">
+<div style="border-bottom: 1px solid black;opacity: 0.2;"></div>
+<nav class="navbar navbar-expand-lg " style="
+    padding-top: 2px;
+">
   <a href="index.php">
     <img src="../images/logo 1.png" class="img" alt="logo" height="85px" />
   </a>
@@ -76,8 +76,6 @@
     </div>
   </div>
 </nav>
-
-
 <!-- <div class="row" style="text-align: center">
         <div class="col-md-3">
           <a href="index.php">
@@ -123,9 +121,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
   var m = $(".menu-item");
-
   m.addClass('fa-bars');
-
   m.on('click', function() {
     if (m.hasClass('fa-bars')) {
       m
