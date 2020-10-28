@@ -1,6 +1,6 @@
 <?php require_once 'database_connect.php';
- ob_start();
- session_start();
+ob_start();
+session_start();
 
 // Submit L Equipe
 if (isset($_POST['submit'])) {
@@ -139,4 +139,87 @@ if (isset($_POST['submit-contact'])) {
    }
 
    // header('location:evolution-admin.php');
+}
+// Submit L Services
+if (isset($_POST['submit-service'])) {
+   $extensions_arr = array("jpg", "jpeg", "png", "gif");
+   $imgName = $_FILES['image']['name'];
+   $target_dir = "upload/";
+   $target_file = $target_dir . basename($_FILES["image"]["name"]);
+   $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+   if (in_array($imageFileType, $extensions_arr)) {
+      $name = $_POST['nom'];
+      $description = $_POST['description'];
+      $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
+      $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
+      $sql = $base->query('INSERT INTO services (nom,description,image)VALUES ("' . $name . '","' . $description . '","' . $image . '")');
+      $newname =  $name . "." . $imageFileType;
+      move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $newname);
+   }
+   header('location:sup-admin.php');
+}
+// Edit Info de base
+if (isset($_POST['submit-info'])) {
+
+   $adress = $_POST['adresse'];
+   $tel1 = $_POST['tel1'];
+   $tel2 = $_POST['tel2'];
+   $email = $_POST['email'];
+   $sql = $base->query('UPDATE info SET adresse = "' . $adress . '" , phone1="' . $tel1 . '", phone2="' . $tel2 . '" , email="' . $email . '" WHERE id = 1');
+   if ($sql) {
+      echo "Yes , Success";
+      header('location:sup-admin.php');
+   } else {
+      echo "NO , Erreur ";
+   }
+}
+// Edit mage acceuil
+if (isset($_POST['submit-acceuil'])) {
+   $extensions_arr = array("jpg", "jpeg", "png", "gif");
+   $imgName = $_FILES['image']['name'];
+   $target_dir = "upload/";
+   $target_file = $target_dir . basename($_FILES["image"]["name"]);
+   $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+   if (in_array($imageFileType, $extensions_arr)) {
+
+      $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
+      $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
+      $sql = $base->query('UPDATE img_acc SET image_accueil = "' . $image . '" WHERE id = 1');
+      $newname =  "Acceuil" . "." . $imageFileType;
+     
+      if ($sql) {
+         echo "Yes , Success";
+         move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $newname);
+         header('location:sup-admin.php');
+      } else {
+         echo "NO , Erreur ";
+      }
+   }
+   // header('location:sup-admin.php');
+}
+
+
+// Edit LOGO 
+if (isset($_POST['submit-logo'])) {
+   $extensions_arr = array("jpg", "jpeg", "png", "gif");
+   $imgName = $_FILES['image']['name'];
+   $target_dir = "upload/";
+   $target_file = $target_dir . basename($_FILES["image"]["name"]);
+   $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+   if (in_array($imageFileType, $extensions_arr)) {
+
+      $image_base64 = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
+      $image = 'data:image/' . $imageFileType . ';base64,' . $image_base64;
+      // $sql = $base->query('INSERT INTO img_logo (image_logo)VALUES ("' . $image . '")');
+      $sql = $base->query('UPDATE img_logo SET image_logo = "' . $image . '" WHERE id = 1');
+      $newname =  "Logo" . "." . $imageFileType;
+      if ($sql) {
+         echo "Yes , Success";
+         move_uploaded_file($_FILES['image']['tmp_name'], $target_dir . $newname);
+         header('location:sup-admin.php#pills-contact');
+      } else {
+         echo "NO , Erreur ";
+      }
+   }
+   // header('location:sup-admin.php');
 }
