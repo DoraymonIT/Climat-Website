@@ -26,9 +26,9 @@ require_once('database_connect.php');
     <div class="row">
       <div class="col-md-12">
         <h3 style="    text-align: center;
-          background-color: cadetblue;
+          color: cadetblue;
           padding: 20px;
-          color: white;">
+          ">
           <i class="fa fa-users" aria-hidden="true"></i> Nos Clients
         </h3>
       </div>

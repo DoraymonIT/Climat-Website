@@ -35,7 +35,7 @@ require_once('database_connect.php');
   <body>
     <div class="container-fluid">
     <?php include_once('header.php'); ?>
-      <div class="row" style="padding: 20px">
+      <div class="row" >
         <div class="col-md-12">
           <h3
             style="

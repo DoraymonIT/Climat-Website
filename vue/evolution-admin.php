@@ -49,7 +49,7 @@ if (empty($_SESSION['username'])) {
         <div class="col-md-3">
           <a href="index.php">
             <img
-              src="../images/logo 1.png"
+            src="../images/logo-officiel.jpeg"
               class="img"
               alt="logo"
               height="85px"

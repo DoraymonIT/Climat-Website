@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../style/style.css">
 <style>
   .navbar-toggler:focus,
   .navbar-toggler:hover {
@@ -6,37 +7,45 @@
   }
 </style>
 <div class="row tof" style="padding-top: 10px; text-align: center">
-  <div class="col-md-1"></div>
-  <div class="col-md-3" style="
-    padding-bottom: 10px;
+  
+  <div class="col-md-4" style="
+    padding: 15px;
 ">
     <i class="fa fa-envelope"></i>
     <a href="mailto:froid.inter@gmail.com">froid.inter@gmail.com</a>
   </div>
-  <div class="col-md-3" style="
-    padding-bottom: 10px;
+  <div class="col-md-4 bordering" style="
+    padding: 15px;
 ">
     <i class="fa fa-phone"></i> <a href="tel:+212600626950">+212600626950</a> &
     <a href="tel:+212672309296">+212672309296</a>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4" style="
+    padding: 15px;
+">
     <i class="fa fa-location-arrow"></i> Quartier Beausejour 5 N 5,
     Tanger
   </div>
-  <div class="col-md-1"></div>
+
 </div>
-<div style="border-bottom: 1px solid black;opacity: 0.2;"></div>
-<nav class="navbar navbar-expand-lg " style="
-    padding-top: 2px;
+<!-- <div style="border-bottom: 2px solid #1b96db;opacity: 0.9;"></div> -->
+<nav class="navbar navbar-expand-lg nav-nav" style="
+  padding-top: 2px;
+  background: rgb(8,139,213);
+background:linear-gradient(90deg, rgb(0 25 39) 0%, rgb(30 126 181) 35%, rgb(233 244 249) 100%);
+    /* border-bottom-left-radius: 40%; */
+    /* border-top-right-radius: 1%; */
+    /* border-top-left-radius: 10%; */
+    /* border-bottom-right-radius: 40%; */
 ">
   <a href="index.php">
-    <img src="../images/logo 1.png" class="img" alt="logo" height="85px" />
+    <img src="../images/voila-logo.png" class="img" alt="logo" height="85px" />
   </a>
   <button style="float: right;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <i style="    font-size: 35px;
-    color: cadetblue;
+    color: #1b96db;
     padding: 3px 10px 3px 10px;
-    border: 2px solid cadetblue;
+    border: 2px solid #1b96db;
     border-radius: 5px;" class="fa menu-item" aria-hidden="true"></i>
   </button>
 
@@ -44,9 +53,11 @@
     text-align: center;
 ">
 
-    <div class="col-md-3" style="
+    <div class="col-md-2" style="
     text-align: left;
-"><a class="navbar-brand" href="index.php" style="    padding-top: 20px;"> <span id="titlee">FROID INTER</span></a></div>
+">
+<!-- <a class="navbar-brand" href="index.php" style="    padding-top: 20px;"> <span id="titlee">FROID INTER</span></a> -->
+</div>
     <div class="col-md-1 cool-link menu">
       <a href="index.php"> Accueil</a>
     </div>
@@ -73,6 +84,8 @@
     </div>
     <div class="col-md-1 cool-link menu">
       <a class="blane" href="fournisseurs.php"> Fournisseurs</a>
+    </div>
+    <div class="col-md-1">
     </div>
   </div>
 </nav>

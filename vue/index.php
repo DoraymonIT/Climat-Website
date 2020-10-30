@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
   <link rel="shortcut icon" href="../images/air-conditioner 1.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet"> 
-   <link rel="stylesheet" href="../style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style/style.css" />
   <link rel="stylesheet" href="../style/query.css">
   <title>FROID INTER | Installation professionnel des climats au Maroc</title>
 </head>
@@ -74,7 +74,7 @@
             <h4 style="text-align: center; font-weight: bold" class="boldd">
               L’installation, le dépannage et la maintenance
             </h4>
-            <img src="../images/service1.png" width="100%" alt="service" style="border-radius: 8px" />
+            <img src="../images/insta-dep.jpeg" width="100%" alt="service" style="border-radius: 8px" />
           </div>
           <div class="col-md-6 aw9aat1">
             <!-- <img src="/images/air-conditioner 2.png" width="40px" /> -->
@@ -116,27 +116,29 @@
     <br />
     <div class="row">
       <div class="col-md-4">
-        <img src="../images/service3.jpg" width="100%" alt="service" style="border-radius: 8px" />
+        <img src="../images/elecricite.jpeg" width="100%" alt="service1" style="border-radius: 8px" />
+        <h5 class="boldd">L’électricité des installations frigorifiques.</h5>
+        <p style="text-align: center">
+          L’électricité des installations frigorifiques.
+        </p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="../images/compresseur.jpeg" width="100%" alt="service2" style="border-radius: 8px" />
+        <h5 class="boldd">Compresseurs frigorifiques.</h5>
+        <p style="text-align: center">
+          Visite et réparation des compresseurs frigorifiques.
+        </p>
+      </div>
+      <div class="col-md-4">
+        <img src="../images/montage-professionel.jpeg" width="100%" alt="service3" style="border-radius: 8px" />
         <h5 class="boldd">Montage Professionnel</h5>
         <p style="text-align: center">
           Montage des panneaux sandwich, des chambres froides, des tunnels de
           congélations et des salles de travail, etc.
         </p>
       </div>
-      <div class="col-md-4">
-        <img src="../images/service2.jpg" width="100%" alt="service" style="border-radius: 8px" />
-        <h5 class="boldd">L’électricité des installations frigorifiques.</h5>
-        <p style="text-align: center">
-          L’électricité des installations frigorifiques.
-        </p>
-      </div>
-      <div class="col-md-4">
-        <img src="../images/service3.jpg" width="100%" alt="service" style="border-radius: 8px" />
-        <h5 class="boldd">Compresseurs frigorifiques.</h5>
-        <p style="text-align: center">
-          Visite et réparation des compresseurs frigorifiques.
-        </p>
-      </div>
+
     </div>
 
     <br />

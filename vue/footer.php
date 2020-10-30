@@ -1,24 +1,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css
 " />
-<link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <style>
   .tiret:after,
-  .tiret:before{
-    content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
-    text-decoration:line-through;
-}
+  .tiret:before {
+    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration: line-through;
+  }
 </style>
 <div class="row footer-bar">
   <div class="col-md-4" style="text-align: center">
     <h3 style="padding-bottom: 31px;"> <span class="tiret"> A propos de nous </span></h3>
     <p style="text-align: left; line-height: 35px; font-weight: bold">
-      Le Frigoriste fournit un service de dépannage efficace et réactif
-      24h / 24 et 7j / 7. Nous proposons également des programmes de
-      maintenance complets pour garantir une durée de vie plus longue et
-      une meilleure efficacité des équipements.
+      <u>FROID INTER</u>, une entreprise dynamique de techniciens frigoristes depuis 2008
+      travaille dur et régulièrement afin de fournir un bon service à notre cher client.
     </p>
     <hr />
     <h6><i class="fa fa-envelope"></i> <a style="color: white;" href="mailto:froid.inter@gmail.com">froid.inter@gmail.com</a></h6>
@@ -59,15 +54,16 @@
     <div class="aw9aat">
       <h6>Lundi-Vendredi</h6>
       <hr />
-      <h5>9:00 AM - 21:00 PM</h5>
+      <h5 style="font-weight: bold">9:00 - 16:00 </h5>
       <br />
-      <h6>Samedi et Dimanche</h6>
+      <h6>Samedi</h6>
       <hr />
-      <h5>8:00 AM - 22:00 PM</h5>
+      <h5 style="font-weight: bold">9:00 - 13:00 </h5>
     </div>
     <br />
+
     <div class="row" style="float: left; padding-top: 15px">
-      <h5 style="  color: #518282;">Restez en contact :</h5>
+      <h5 style="  color: #518282;font-weight: bold">Restez en contact :</h5>
     </div>
     <div class="row" style="float: right">
       <a class="s-m" href="https://web.facebook.com/FROID-INTER-118342640026522/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
