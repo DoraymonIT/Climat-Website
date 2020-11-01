@@ -21,7 +21,7 @@
   <div id="loading"></div>
   <div class="container-fluid page">
     <?php include_once('header.php'); ?>
-    <div class="row baccck" style="background-color: #457879">
+    <div class="row baccck" style="background-color: #1b96db">
       <h4 id="definition">
         Une entreprise dynamique de techniciens frigoristes, au service de ses
         clients !
@@ -29,7 +29,7 @@
         <br />
         <br />
         <a style="color: white" href="contact.php">
-          <button style="    box-shadow: 2px 2px 10px rgb(0 0 0);" class="btn btn-info btn-custom">Contactez-Nous</button></a>
+          <button style="    box-shadow: 2px 2px 10px rgb(0 0 0);background-color: #1b96db;" class="btn btn-info btn-custom">Contactez-Nous</button></a>
       </h4>
     </div>
     <br />

@@ -27,7 +27,7 @@ session_start(); ?>
 
 <body>
   <div class="container-fluid" style="background-color: white;">
-    <div class="row tof" style="padding-top: 10px; text-align: center">
+    <div class="row tof" style=" text-align: center">
       <div class="col-md-3" style="
     padding: 15px;
 ">
@@ -58,7 +58,7 @@ session_start(); ?>
       </div>
     </div>
     <!-- <div style="border-bottom: 2px solid #1b96db;opacity: 0.9;"></div> -->
-<nav class="navbar navbar-expand-lg nav-nav" style="
+    <nav class="navbar navbar-expand-lg nav-nav" style="
   padding-top: 2px;
   background: rgb(8,139,213);
 background: linear-gradient(90deg, rgb(25 52 68) 0%, rgb(30 126 181) 35%, rgb(233 244 249) 100%);background-color: #8abed9;
@@ -67,66 +67,67 @@ background: linear-gradient(90deg, rgb(25 52 68) 0%, rgb(30 126 181) 35%, rgb(23
     /* border-top-left-radius: 10%; */
     /* border-bottom-right-radius: 40%; */
 ">
-  <a href="index.php">
-    <img src="../images/voila-logo.png" class="img" alt="logo" height="85px" />
-  </a>
-  <button style="float: right;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <i style="    font-size: 35px;
+      <a href="index.php">
+        <img src="../images/voila-logo.png" class="img" alt="logo" height="85px" />
+      </a>
+      <button style="float: right;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <i style="    font-size: 35px;
     color: #1b96db;
     padding: 3px 10px 3px 10px;
     border: 2px solid #1b96db;
     border-radius: 5px;" class="fa menu-item" aria-hidden="true"></i>
-  </button>
+      </button>
 
-  <div class="collapse navbar-collapse row" id="navbarTogglerDemo01" style="
+      <div class="collapse navbar-collapse row" id="navbarTogglerDemo01" style="
     text-align: center;
 ">
 
-    <div class="col-md-2" style="
+        <div class="col-md-2" style="
     text-align: left;
 ">
-<!-- <a class="navbar-brand" href="index.php" style="    padding-top: 20px;"> <span id="titlee">FROID INTER</span></a> -->
-</div>
-    <div class="col-md-1 cool-link menu">
-      <a href="index.php"> Accueil</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="index.php#services"> Services</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="contact.php"> Contact</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="NosProduits.php"> Produits</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="gallery.php"> Galerie</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="evolution-charts.php"> Chiffres</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="AboutUs.php"> Équipe</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="clients.php"> Clients</a>
-    </div>
-    <div class="col-md-1 cool-link menu">
-      <a class="blane" href="fournisseurs.php"> Fournisseurs</a>
-    </div>
-    <div class="col-md-1">
-    </div>
-  </div>
-</nav>
+          <!-- <a class="navbar-brand" href="index.php" style="    padding-top: 20px;"> <span id="titlee">FROID INTER</span></a> -->
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a href="index.php"> Accueil</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="index.php#services"> Services</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="contact.php"> Contact</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="NosProduits.php"> Produits</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="gallery.php"> Galerie</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="evolution-charts.php"> Chiffres</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="AboutUs.php"> Équipe</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="clients.php"> Clients</a>
+        </div>
+        <div class="col-md-1 cool-link menu">
+          <a class="blane" href="fournisseurs.php"> Fournisseurs</a>
+        </div>
+        <div class="col-md-1">
+        </div>
+      </div>
+    </nav>
     <div class="row">
       <div class="col-md-6">
         <form action="ajout-member.php" method="post">
           <h1 style="    text-align: center;
-          color: cadetblue;
+          color: #1b96db;
           padding: 20px;
           font-weight: 800;">Contactez-Nous</h1>
           <br />
-          <div class="row">
+          <div class="row" style=" 
+          font-weight: 800;">
 
             <div class="col-md-6">
               <label>Nom Complet</label>
@@ -138,7 +139,8 @@ background: linear-gradient(90deg, rgb(25 52 68) 0%, rgb(30 126 181) 35%, rgb(23
             </div>
           </div>
           <br />
-          <div class="row">
+          <div class="row" style=" 
+          font-weight: 800;">
             <div class="col-md-6">
               <label> Téléphone </label>
               <input class="form-control form-control-lg" type="text" name="phone" placeholder="Telephone*" required />
@@ -149,17 +151,19 @@ background: linear-gradient(90deg, rgb(25 52 68) 0%, rgb(30 126 181) 35%, rgb(23
             </div>
           </div>
           <br />
-          <div class="row">
+          <div class="row" style=" 
+          font-weight: 800;">
             <div class="col-md-12">
               <label>Adresse</label>
               <textarea class="form-control form-control-lg" type="text" name="adress" placeholder="Adresse*"></textarea>
             </div>
           </div>
           <br />
-          <div class="row">
+          <div class="row" style=" 
+          font-weight: 800;">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-              <button style="padding: 15px;border-radius: 50px;font-weight: 900;" class="btn btn-info btn-block" type="submit" name="submit-contact">Envoyer</button>
+              <button style="padding: 15px;border-radius: 50px;font-weight: 900;background-color: #1b96db;" class="btn btn-info btn-block" type="submit" name="submit-contact">Envoyer</button>
             </div>
             <div class="col-md-4"></div>
           </div>
@@ -178,7 +182,7 @@ background: linear-gradient(90deg, rgb(25 52 68) 0%, rgb(30 126 181) 35%, rgb(23
             <?php echo $_SESSION['x'] ?> </div>
         <?php endif ?>
         <img src="../images/contactez-nous.jpeg" id="gone" width="100%" style="
-    border: 5px solid cadetblue;
+    border: 5px solid #1b96db;
     border-bottom-left-radius: 70%;
     border-top-right-radius: 25%;" alt="contact Page Image" />
       </div>

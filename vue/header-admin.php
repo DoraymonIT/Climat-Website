@@ -5,7 +5,7 @@
     }
   </style>
 <hr>
-    <div class="row" style="text-align: center;background-color: #c5e7e8;">
+    <div class="row" style="text-align: center;    background: linear-gradient(90deg, rgb(25 52 68) 0%, rgb(30 126 181) 35%, rgb(233 244 249) 100%);">
       <div class="col-md-2 ">
         <div class="cool-link">
           <a href="equipe-admin.php">

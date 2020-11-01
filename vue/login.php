@@ -56,9 +56,7 @@ if (!empty($_SESSION['username'])) {
 
         <div class="row">
           <div class="col-md-12" style="text-align: center;">
-            <i class="fa fa-user-circle-o" style="font-size: 70px; text-align: center" aria-hidden="true"></i>
-            <br>
-            <h4>FROID INTER</h4>
+          <img src="../images/voila-logo.png" class="img" alt="logo" height="85px" />
             <br>
           </div>
         </div>
@@ -75,7 +73,7 @@ if (!empty($_SESSION['username'])) {
           <button id="button1" class="btn btn-block btn-success" type="submit" name="login-submit" onclick="loadingEvent()">
             Se connecter
           </button>
-          <button id="button2" class="btn btn-block btn-success" disabled style="display: none;cursor: wait;">
+          <button id="button2" class="btn btn-block btn-success" disabled style="display: none;cursor: not-allowed;">
             <i class="fa fa-spinner fa-spin"></i>
           </button>
 

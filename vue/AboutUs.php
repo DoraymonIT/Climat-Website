@@ -25,11 +25,14 @@
   <div class="container-fluid">
     <?php include_once('header.php'); ?>
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12" style="
+    padding-left: 25px;
+    padding-right: 25px;
+">
         <h3 style="    text-align: center;
-          background-color: cadetblue;
+         color: #1b96db;
           padding: 20px;
-          color: white;">
+          ">
           <i class="fas fa-users-cog"></i> A propos de l’entreprise
         </h3>
         <br />
@@ -55,7 +58,7 @@
               padding-left: 40px;
               padding-right: 40px;
               padding-bottom: 40px;
-              text-align: center;
+              text-align: center;color: #1b96db;
             ">
           <img src="../images/cold.png" width="50px" />
           Notre professionnels Équipe

@@ -26,17 +26,19 @@ require_once('database_connect.php');
     <?php include_once('header.php'); ?>
     <div class="row" style="text-align: center">
       <div class="col-md-12">
-        <h3 style="    text-align: center;
-          background-color: cadetblue;
-          padding: 20px;
-          color: white;">
+        <h3   style="
+              text-align: center;
+              color: #1b96db;
+              padding: 20px;
+            
+            ">
           <i class="fa fa-shopping-bag" aria-hidden="true"></i> La Galerie de
           nos projets
         </h3>
       </div>
     </div>
 
-    <div class="row" style="padding-top: 50px">
+    <div class="row" style="padding-top: 10px">
       <?php
       $select1 = $base->query('SELECT * FROM gallery ');
       foreach ($select1 as $data) :
@@ -45,7 +47,7 @@ require_once('database_connect.php');
           <div class="row">
             <div class="col-md-6">
               <h3 style="text-align: center">
-                <span class="badge badge-pill badge-info">
+                <span class="badge badge-pill badge-info" style=" background-color: #1b96db;">
                   <i class="fa fa-flag-checkered" aria-hidden="true"></i> Pays
                   de <?php echo $data['pays'] ?></span>
               </h3>

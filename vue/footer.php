@@ -63,7 +63,7 @@
     <br />
 
     <div class="row" style="float: left; padding-top: 15px">
-      <h5 style="  color: #518282;font-weight: bold">Restez en contact :</h5>
+      <h5 style="  color:#003757;font-weight: bold">Restez en contact :</h5>
     </div>
     <div class="row" style="float: right">
       <a class="s-m" href="https://web.facebook.com/FROID-INTER-118342640026522/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -79,7 +79,7 @@
     <hr>
     <p style="    float: right;
     padding: 5px;
-    color: #518282;
+    color: rgb(0 85 135);
     font-weight: bold;">
       Tous les droits sont réservés au <a href="index.php"> FROID INTER</a>
       <i class="fa fa-copyright" style="font-size: 15px" aria-hidden="true"></i>

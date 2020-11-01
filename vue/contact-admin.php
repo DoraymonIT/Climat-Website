@@ -31,23 +31,23 @@ if (empty($_SESSION['username'])) {
 
 <body>
   <div class="container-fluid" style="padding: 20px">
-    <div class="row">
-      <div class="col-md-3">
-        <a href="index.php">
-          <img src="../images/logo 1.png" class="img" alt="logo" height="85px" />
-          <span id="titlee">FROID INTER</span></a>
-      </div>
-      <div class="col-md-4"></div>
-      <div class="col-md-5">
-        <div style="padding: 30px">
+  <div class="row">
+        <div class="col-md-3">
+        
+          <img src="../images/voila-logo.png" class="img" alt="logo" height="85px" />
 
-          <?php if (isset($_SESSION['username'])) : ?>
-            <h6> <i class="fa fa-user-circle" aria-hidden="true"></i> Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
-            <p><a href="logout.php" class="btn btn-primary" href="#" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></p>
-          <?php endif ?>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-4">
+          <div style="padding: 10px 0px 0px 0px">
+           
+             <?php if (isset($_SESSION['username'])): ?>
+                  <h6> <i class="fa fa-user-circle" aria-hidden="true"></i>  Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
+                  <p><a href="logout.php" class="btn btn-primary" href="#" role="button"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></p>
+              <?php endif ?>
+          </div>
         </div>
       </div>
-    </div>
     <?php include_once('header-admin.php') ?>
     <div class="row">
 

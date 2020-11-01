@@ -32,10 +32,12 @@ foreach ($details as $detail) :
             <?php include_once('header.php'); ?>
             <div class="row">
                 <div class="col-md-4">
-                    <h3 style="    text-align: center;
-          background-color: cadetblue;
-          padding: 20px;
-          color: white;">Informations</h3>
+                    <h3   style="
+              text-align: center;
+              color: #1b96db;
+              padding: 20px;
+            
+            ">Informations</h3>
                     <br>
                     <h5> <i class="fa fa-user" aria-hidden="true"></i> Client : <b> <?php echo $detail['client'] ?> </b></h5> <br>
 
@@ -45,10 +47,12 @@ foreach ($details as $detail) :
                     <h5 style="line-height: 40px;"> <i class="fa fa-paragraph" aria-hidden="true"></i> Description : <b> <?php echo $detail['description'] ?></b></h5>
                 </div>
                 <div class="col-md-8">
-                    <h3 style="    text-align: center;
-          background-color: cadetblue;
-          padding: 20px;
-          color: white;">Gallerie des PHOTOS</h3>
+                    <h3  style="
+              text-align: center;
+              color: #1b96db;
+              padding: 20px;
+            
+            ">Gallerie des PHOTOS</h3>
                     <br>
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">

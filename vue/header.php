@@ -6,7 +6,9 @@
     outline: 0px none;
   }
 </style>
-<div class="row tof" style="padding-top: 10px; text-align: center">
+<div class="row tof" style="
+/* padding-top: 10px; */
+ text-align: center">
   
   <div class="col-md-4" style="
     padding: 15px;

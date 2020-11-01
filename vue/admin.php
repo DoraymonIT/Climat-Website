@@ -38,19 +38,13 @@
     >
       <div class="row">
         <div class="col-md-3">
-          <a href="index.php">
-            <img
-              src="../images/logo 1.png"
-              class="img"
-              alt="logo"
-              height="85px"
-            />
-            <span id="titlee">FROID INTER</span></a
-          >
+        
+          <img src="../images/voila-logo.png" class="img" alt="logo" height="85px" />
+
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-5">
-          <div style="padding: 30px">
+        <div class="col-md-5"></div>
+        <div class="col-md-4">
+          <div style="padding: 10px 0px 0px 0px">
            
              <?php if (isset($_SESSION['username'])): ?>
                   <h6> <i class="fa fa-user-circle" aria-hidden="true"></i>  Vous êtes Connecte : <?php echo $_SESSION['username'] ?> !</h6>
@@ -114,13 +108,13 @@
             Messages et FeedBacks
           </div></a>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <a href="sup-admin.php">   <div class="sha"
             style="box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15); padding: 40px"
           >
            <i class="fa fa-exclamation-triangle " aria-hidden="true"></i> Super Admin
           </div></a>
-        </div>
+        </div> -->
       </div>
 
       <hr />

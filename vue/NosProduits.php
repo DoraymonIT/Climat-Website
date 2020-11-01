@@ -40,9 +40,9 @@ require_once('database_connect.php');
           <h3
             style="
               text-align: center;
-              background-color: cadetblue;
+              color: #1b96db;
               padding: 20px;
-              color: white;
+            
             "
           >
             <i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -58,7 +58,7 @@ foreach ($products as $data) :
             <div class="col-md-4">
               <img src='<?php echo $data['image']; ?>' style="border-radius: 10px;" width="100%" alt="Produit <?php echo $data['id']; ?>">
               <!-- <br> -->
-              <h4 style="text-align: center;padding-top: 30px;"> <b><?php echo $data['nom']; ?></b></h4>
+              <h4 style="text-align: center;padding-top: 20px;"> <b><?php echo $data['nom']; ?></b></h4>
               <br>
               <h6>
                 <b>  Description</b> : <p><?php echo $data['description']; ?> </p>  

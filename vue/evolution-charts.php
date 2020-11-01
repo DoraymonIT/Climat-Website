@@ -23,20 +23,23 @@ require_once('database_connect.php');
 <body>
   <div class="container-fluid">
     <?php include_once('header.php'); ?>
-    <div class="row" style="background-color: cadetblue; padding: 10px">
+    <div class="row" style="padding: 10px">
       <div class="col-md-12">
-        <h3 style="text-align: center; color: white;">
+        <h3 style="text-align: center; color: #1b96db;">
           <i class="fa fa-area-chart" aria-hidden="true"></i> FROID INTER en
           Chiffres
         </h3>
-        <br />
-        <div class="row" style="text-align: center">
+    
+        <div class="row" style="text-align: center;
+        background: linear-gradient(90deg, rgb(0 123 191) 0%, rgb(30 126 181) 35%, rgb(233 244 249) 100%);
+        
+    padding: 10px;">
           <div class="col-md-4">
             <img src="../images/employee.svg" width="20%" alt="employes number" />
             <br />
             <br />
 
-            <h5> <?php
+            <h5 style="font-weight: 900;color: #1b96db;"> <?php
                   $how = $base->query('SELECT count(*) FROM peoples');
                   foreach ($how as $ff) :
                     echo $ff['count(*)'];
@@ -47,7 +50,7 @@ require_once('database_connect.php');
               <br />
               <br />
 
-              <h5> <?php $total = $base->query('SELECT sum(combien) FROM ca ');
+              <h5 style="font-weight: 900;color: #1b96db;"> <?php $total = $base->query('SELECT sum(combien) FROM ca ');
                     $s = 0;
                     foreach ($total as $c) :  ?>
                   <th><?php echo number_format(($c['sum(combien)']), 2, '.', ',');; ?></th> <?php endforeach; ?> Dirham Marocain (MAD)</h5>
@@ -58,18 +61,20 @@ require_once('database_connect.php');
             <br />
             <br />
 
-            <h5> <?php
+            <h5  style="font-weight: 900;color: #1b96db;"> <?php
                   $how = $base->query('SELECT count(*) FROM gallery');
                   foreach ($how as $ff) :
                     echo $ff['count(*)'];
                   endforeach; ?> Projets</h5>
           </div>
         </div>
+
       </div>
     </div>
+    
     <div class="row" style="padding: 50px">
       <div class="col-md-12">
-        <h3 style="text-align: center">
+        <h3 style="text-align: center;color: #1b96db;">
           <i class="fa fa-bar-chart" aria-hidden="true"></i> Notre évolution
           par Année
         </h3>
@@ -120,12 +125,12 @@ require_once('database_connect.php');
         label: ' Notre Chiffre d affaires dans les derniers années en DIRHAMS MAROCAIN (MAD)',
         data: ["<?php echo implode('","', $numbers); ?>"],
         backgroundColor: [
-          'cadetblue',
-          'cadetblue',
-          'cadetblue',
-          'cadetblue',
-          'cadetblue',
-          'cadetblue'
+          '#1b96db',
+          '#1b96db',
+          '#1b96db',
+          '#1b96db',
+          '#1b96db',
+          '#1b96db'
         ],
         borderColor: [
           '#243738',

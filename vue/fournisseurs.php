@@ -25,16 +25,18 @@ require_once('database_connect.php');
     <?php include_once('header.php'); ?>
     <div class="row">
       <div class="col-md-12">
-        <h3 style="    text-align: center;
-          background-color: cadetblue;
-          padding: 20px;
-          color: white;">
+        <h3   style="
+              text-align: center;
+              color: #1b96db;
+              padding: 20px;
+            
+            ">
           <i class="fa fa-users" aria-hidden="true"></i> Nos Fournisseurs
         </h3>
       </div>
     </div>
 
-    <div class="row" style="padding-top: 60px;padding-left: 5px;padding-right: 5px;">
+    <div class="row" style="padding-left: 5px;padding-right: 5px;">
       <?php
       $four = $base->query('SELECT * FROM client_fournisseur WHERE categorie="Fournisseur"');
       foreach ($four as $data) :
@@ -42,7 +44,7 @@ require_once('database_connect.php');
         <div class="col-md-4 " >
         <div class="client" style="text-align: center;">
           <h2><?php echo $data['nom'] ?></h2>
-          <div style="border-bottom: 2px solid cadetblue;"></div>
+          <div style="border-bottom: 2px solid #1b96db;"></div>
           <img width="150px" src='<?php echo $data['image']; ?>'>
           <p>
             <?php echo $data['description'] ?>
